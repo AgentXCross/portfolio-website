@@ -82,7 +82,7 @@ function App() {
             fontFamily: "'Klein Condensed', sans-serif",
             fontWeight: 800,
             fontSize: "12rem",
-            letterSpacing: "-0.02em"
+            letterSpacing: "-0.03em"
           }}
         >
           {/* Invisible text for Placeholder */}
@@ -101,19 +101,20 @@ function App() {
             </span>
           )}
         </h1>
+        
         <div className="relative z-10 mt-4 flex items-center justify-center">
           <img
             src={wingLeft}
             alt=""
             className="absolute object-contain mix-blend-screen"
-            style={{ height: '475px', maxWidth: 'none', maxHeight: 'none', right: '-50%', top: '20%', transform: 'translateY(-50%) translateX(20%)' }}
+            style={{ height: '475px', maxWidth: 'none', maxHeight: 'none', right: '-50%', top: '28%', transform: 'translateY(-50%) translateX(20%)' }}
           />
           <img src={profileImg} alt="Michael L." className="h-80 rounded-full relative z-10" />
           <img
             src={wingRight}
             alt=""
             className="absolute object-contain mix-blend-screen"
-            style={{ height: '475px', maxWidth: 'none', maxHeight: 'none', left: '-50%', top: '20%', transform: 'translateY(-50%) translateX(-20%)' }}
+            style={{ height: '475px', maxWidth: 'none', maxHeight: 'none', left: '-50%', top: '28%', transform: 'translateY(-50%) translateX(-20%)' }}
           />
         </div>
       </section>
@@ -137,7 +138,7 @@ function App() {
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   <p>
-                    Hi, I’m Michael! I'm currently a 2A BCS Computer Science student at the University of Waterloo.
+                    Hi, I’m Michael! I'm currently a 2A BCS Computer Science + Digital Hardware student at the University of Waterloo.
                     This summer, I'm working at SickKids as a Machine Learning Research Assistant, researching reaction-based generative models
                     for drug discovery. My primary interests are in Embedded Systems, Machine Learning, and Computer Vision.
                   </p>
@@ -195,7 +196,7 @@ function App() {
                 </CardContainer>
               </div>
               {/* Dot */}
-              <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#FF1493] z-10" />
+              <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
               <div className="timeline-img w-1/2 pl-12">
                 <img src={sickKidsHospital} alt="SickKids Hospital" className="w-full rounded-2xl object-cover h-48" loading="lazy" />
               </div>
@@ -207,7 +208,7 @@ function App() {
                 <img src={wataiImage} alt="WAT.ai" className="w-full rounded-2xl object-cover h-48" loading="lazy" />
               </div>
               {/* Dot */}
-              <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#FF1493] z-10" />
+              <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
               <div className="timeline-card timeline-card-right w-1/2 pl-12">
                 <CardContainer className="w-full" containerClassName="py-0 w-full">
                   <CardBody className="w-full">
@@ -255,7 +256,7 @@ function App() {
                 </CardContainer>
               </div>
               {/* Dot */}
-              <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#FF1493] z-10" />
+              <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
               <div className="timeline-img w-1/2 pl-12">
                 <img src={utcImage} alt="Unionville Tennis Club" className="w-full rounded-2xl object-cover h-48" loading="lazy" />
               </div>
@@ -431,7 +432,7 @@ function App() {
                 </CardContainer>
               </div>
               {/* Dot */}
-              <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#FF1493] z-10" />
+              <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
               <div className="timeline-img w-1/2 pl-12">
                 <img src={waterlooimage} alt="waterloo" className="w-full rounded-2xl object-cover h-48" loading="lazy" />
               </div>
@@ -443,7 +444,7 @@ function App() {
                 <img src={bcssImage} alt="bcss" className="w-full h-48 object-cover rounded-2xl" loading="lazy" />
               </div>
               {/* Dot */}
-              <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#FF1493] z-10" />
+              <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
               <div className="timeline-card timeline-card-right w-1/2 pl-12">
                 <CardContainer className="w-full" containerClassName="py-0 w-full">
                   <CardBody className="w-full">
@@ -516,7 +517,7 @@ function App() {
                 </CardContainer>
               </div>
               {/* Dot */}
-              <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#FF1493] z-10" />
+              <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
               <div className="timeline-img w-1/2 pl-12">
                 <img src={xcteam} alt="Placeholder" className="w-full rounded-2xl object-cover h-48" loading="lazy" />
               </div>
@@ -528,7 +529,7 @@ function App() {
                 <img src={uttcTeam} alt="Placeholder" className="w-full rounded-2xl object-cover h-48" loading="lazy" />
               </div>
               {/* Dot */}
-              <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#FF1493] z-10" />
+              <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
               <div className="timeline-card timeline-card-right w-1/2 pl-12">
                 <CardContainer className="w-full" containerClassName="py-0 w-full">
                   <CardBody className="w-full">
@@ -576,7 +577,7 @@ function App() {
                 </CardContainer>
               </div>
               {/* Dot */}
-              <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#FF1493] z-10" />
+              <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
               <div className="timeline-img w-1/2 pl-12">
                 <img src={avivaCentre} alt="Placeholder" className="w-full rounded-2xl object-cover h-48" loading="lazy" />
               </div>
