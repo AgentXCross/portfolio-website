@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import NavBar from "./components/NavBar";
 import SkillDock from "./components/SkillDock";
 import { HoleBackground } from "./components/WormholeBackground";
@@ -34,26 +34,6 @@ import uttcTeam from "./assets/uoftteam.webp";
 import avivaCentre from "./assets/avivacentre.webp";
 
 function App() {
-  const fullText = "MICHAEL L.";
-  const [typedText, setTypedText] = useState("");
-  const [isTyping, setIsTyping] = useState(true);
-
-  useEffect(() => {
-    let index = 0;
-
-    const interval = setInterval(() => {
-      setTypedText(fullText.slice(0, index + 1));
-      index++;
-
-      if (index === fullText.length) {
-        clearInterval(interval);
-        setIsTyping(false);
-      }
-    }, 140);
-
-    return () => clearInterval(interval);
-  }, []);
-
   useEffect(() => {
     const sections = document.querySelectorAll('.fade-in-section');
     const observer = new IntersectionObserver(
@@ -85,23 +65,9 @@ function App() {
             letterSpacing: "-0.03em"
           }}
         >
-          {/* Invisible text for Placeholder */}
-          <span className="invisible absolute">
-            MICHAEL L.
-          </span>
-
-          {/* Visible Typed Title Text */}
-          <span>
-            {typedText}
-          </span>
-
-          {isTyping && (
-            <span className="relative inline-block w-3">
-              <span className="absolute left-0 top-0 h-full w-1 bg-white blink" />
-            </span>
-          )}
+          MICHAEL L.
         </h1>
-        
+
         <div className="relative z-10 mt-4 flex items-center justify-center">
           <img
             src={wingLeft}
@@ -266,7 +232,7 @@ function App() {
         </div>
       </section>
 
-      {/* Technical Skills */}
+      {/* Tech Stack */}
       <section id="skills" className="fade-in-section flex flex-col items-start justify-start px-25 py-8 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.60] pointer-events-none">
           <MatrixBackground color="#007213" fontSize={14} />
@@ -275,7 +241,7 @@ function App() {
           className="relative z-10 text-white leading-none mb-8"
           style={{ fontFamily: "'Klein Condensed', sans-serif", fontWeight: 800, fontSize: '4rem' }}
         >
-          TECHNICAL SKILLS
+          TECH STACK
         </h2>
         <div className="relative z-10 w-full">
           <SkillDock />

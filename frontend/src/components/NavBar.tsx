@@ -24,7 +24,7 @@ export default function NavBar() {
             EXPERIENCE
           </a>
           <a href="#skills" className="text-black font-bold text-base` hover:opacity-70 transition-opacity">
-            SKILLS
+            TECH STACK
           </a>
           <a href="#projects" className="text-black font-bold text-base` hover:opacity-70 transition-opacity">
             PROJECTS
