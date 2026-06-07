@@ -1,8 +1,8 @@
 import "./App.css";
 import { useEffect } from "react";
 import NavBar from "./components/NavBar";
-import SkillDock from "./components/SkillDock";
 import { HoleBackground } from "./components/WormholeBackground";
+import SkillDock from "./components/SkillDock";
 import { MatrixBackground } from "./components/MatrixBackground";
 import { CardContainer, CardBody, CardItem } from "./components/3DCard";
 import { Analytics } from "@vercel/analytics/react";
@@ -67,6 +67,7 @@ function App() {
         >
           MICHAEL L.
         </h1>
+
 
         <div className="relative z-10 mt-4 flex items-center justify-center">
           <img
