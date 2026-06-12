@@ -8,8 +8,7 @@ import { CardContainer, CardBody, CardItem } from "./components/3DCard";
 import { Analytics } from "@vercel/analytics/react";
 
 /* Image Imports */
-// import profileImg from "./assets/profile.webp";
-import casualProfileImg from "./assets/casual_profile.jpg";
+import profileImg from "./assets/profile.webp";
 import wingLeft from "./assets/wing_left.webp";
 import wingRight from "./assets/wing_right.webp";
 import bibsImg from "./assets/bibs.webp";
@@ -77,7 +76,7 @@ function App() {
             className="absolute object-contain mix-blend-screen"
             style={{ height: '475px', maxWidth: 'none', maxHeight: 'none', right: '-50%', top: '28%', transform: 'translateY(-50%) translateX(20%)' }}
           />
-          <img src={casualProfileImg} alt="Michael L." className="h-80 rounded-full relative z-10" />
+          <img src={profileImg} alt="Michael L." className="h-80 rounded-full relative z-10" />
           <img
             src={wingRight}
             alt=""
