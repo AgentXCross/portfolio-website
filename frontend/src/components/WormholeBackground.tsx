@@ -15,10 +15,10 @@ type HoleBackgroundProps = React.ComponentProps<'div'> & {
 };
 
 function HoleBackground({
-  strokeColor = '#ffe600',
+  strokeColor = '#daff0f',
   numberOfLines = 50,
   numberOfDiscs = 50,
-  particleRGBColor = [255, 230, 0],
+  particleRGBColor = [218, 255, 15],
   className,
   children,
   ...props
@@ -328,7 +328,7 @@ function HoleBackground({
       className={cn(
         'relative size-full overflow-hidden',
         'before:content-[""] before:absolute before:top-1/2 before:left-1/2 before:block before:size-[140%] dark:before:[background:radial-gradient(ellipse_at_50%_55%,transparent_10%,black_50%)] before:[background:radial-gradient(ellipse_at_50%_55%,transparent_10%,white_50%)] before:[transform:translate3d(-50%,-50%,0)]',
-        'after:content-[""] after:absolute after:z-[5] after:top-1/2 after:left-1/2 after:block after:size-full after:[background:radial-gradient(ellipse_at_50%_75%,#ffe600_20%,transparent_75%)] after:[transform:translate3d(-50%,-50%,0)] after:mix-blend-overlay',
+        'after:content-[""] after:absolute after:z-[5] after:top-1/2 after:left-1/2 after:block after:size-full after:[background:radial-gradient(ellipse_at_50%_75%,#daff0f_20%,transparent_75%)] after:[transform:translate3d(-50%,-50%,0)] after:mix-blend-overlay',
         className,
       )}
       {...props}
@@ -341,7 +341,7 @@ function HoleBackground({
       <motion.div
         className="absolute top-[-71.5%] left-1/2 z-[3] w-[30%] h-[140%] rounded-b-full blur-3xl opacity-10 dark:mix-blend-plus-lighter mix-blend-plus-darker [transform:translate3d(-50%,0,0)] [background-size:100%_200%]"
         style={{
-          background: 'linear-gradient(20deg, #ffe600, rgba(255,230,0,0.12) 16.5%, #ffe600 33%, rgba(255,230,0,0.12) 49.5%, #ffe600 66%, rgba(255,230,0,0.38) 85.5%, #ffe600 100%)',
+          background: 'linear-gradient(20deg, #daff0f, rgba(218,255,15,0.12) 16.5%, #daff0f 33%, rgba(218,255,15,0.12) 49.5%, #daff0f 66%, rgba(218,255,15,0.38) 85.5%, #daff0f 100%)',
           backgroundSize: '100% 200%',
           backgroundPosition: '0% 100%',
         }}
