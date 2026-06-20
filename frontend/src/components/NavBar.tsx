@@ -9,8 +9,8 @@ export default function NavBar() {
       >
         {/* Left - Name */}
         <span
-          className="nav-name text-black text-xl font-black"
-          style={{ fontFamily: "'Klein Condensed', sans-serif" }}
+          className="nav-name text-black text-2xl font-black tracking-normal"
+          style={{ fontFamily: "'Anton', sans-serif" }}
         >
           MICHAEL L.
         </span>
@@ -18,21 +18,21 @@ export default function NavBar() {
         {/* Center - Sections */}
         <div
           className="nav-sections hidden md:flex items-center gap-6"
-          style={{ fontFamily: "'Klein Condensed', sans-serif" }}
+          style={{ fontFamily: "'Anton', sans-serif" }}
         >
-          <a href="#experience" className="text-black font-black text-base` hover:opacity-70 transition-opacity">
+          <a href="#experience" className="text-black font-black text-lg tracking-widest` hover:opacity-70 transition-opacity">
             EXPERIENCE
           </a>
-          <a href="#skills" className="text-black font-black text-base` hover:opacity-70 transition-opacity">
+          <a href="#skills" className="text-black font-black text-lg tracking-widest` hover:opacity-70 transition-opacity">
             TECH STACK
           </a>
-          <a href="#projects" className="text-black font-black text-base` hover:opacity-70 transition-opacity">
+          <a href="#projects" className="text-black font-black text-lg tracking-widest` hover:opacity-70 transition-opacity">
             PROJECTS
           </a>
-          <a href="#education" className="text-black font-black text-base` hover:opacity-70 transition-opacity">
+          <a href="#education" className="text-black font-black text-lg tracking-widest` hover:opacity-70 transition-opacity">
             EDUCATION
           </a>
-          <a href="#extracurriculars" className="text-black font-black text-base` hover:opacity-70 transition-opacity">
+          <a href="#extracurriculars" className="text-black font-black text-lg tracking-widest` hover:opacity-70 transition-opacity">
             ECS
           </a>
         </div>
@@ -65,8 +65,8 @@ export default function NavBar() {
             href={resumeFile}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-black font-black hover:opacity-70 transition-opacity"
-            style={{ fontFamily: "'Klein Condensed', sans-serif" }}
+            className="text-black font-black text-lg tracking-normal hover:opacity-70 transition-opacity"
+            style={{ fontFamily: "'Anton', sans-serif" }}
           >
             RESUME
           </a>

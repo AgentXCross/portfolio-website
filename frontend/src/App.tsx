@@ -1,4 +1,5 @@
 import "./App.css";
+import "@fontsource/anton/400.css";
 import { useEffect } from "react";
 import NavBar from "./components/NavBar";
 import { HoleBackground } from "./components/WormholeBackground";
@@ -17,6 +18,7 @@ import watai from "./assets/watai.png";
 import utc from "./assets/utc.png";
 import arxtract from "./assets/arxtract.webp";
 import courtVision from "./assets/courtvision.png";
+import cppProject from "./assets/cpp_project.png";
 import hydraNet from "./assets/HydraLA-Net.webp";
 import progressiveOptimizationPaper from "./assets/Progressive_Optimization_of_HydraLA_Net_for_Microaneurysm_Segmentation.pdf";
 import sickKidsHospital from "./assets/sickkidshospital.webp";
@@ -59,10 +61,10 @@ function App() {
         <h1
           className="relative z-20 leading-none"
           style={{
-            fontFamily: "'Klein Condensed', sans-serif",
-            fontWeight: 800,
+            fontFamily: "'Anton', sans-serif",
+            fontWeight: 700,
             fontSize: "12rem",
-            letterSpacing: "-0.03em"
+            letterSpacing: "0.03em"
           }}
         >
           MICHAEL L.
@@ -94,7 +96,7 @@ function App() {
               <CardItem translateZ={10} className="w-full">
                 <h2
                   className="text-white leading-none mb-8"
-                  style={{ fontFamily: "'Klein Condensed', sans-serif", fontWeight: 800, fontSize: '4rem' }}
+                  style={{ fontFamily: "'Anton', sans-serif", fontWeight: 800, fontSize: '4rem', letterSpacing: '0.03em' }}
                 >
                   ABOUT ME
                 </h2>
@@ -127,7 +129,7 @@ function App() {
       <section id="experience" className="fade-in-section flex flex-col items-start justify-start px-25 py-12">
         <h2
           className="text-white leading-none mb-16"
-          style={{ fontFamily: "'Klein Condensed', sans-serif", fontWeight: 800, fontSize: '4rem' }}
+          style={{ fontFamily: "'Anton', sans-serif", fontWeight: 800, fontSize: '4rem', letterSpacing: '0.03em' }}
         >
           WORK EXPERIENCE
         </h2>
@@ -185,7 +187,7 @@ function App() {
                           <img src={watai} alt="logo" className="w-22 h-22 rounded-lg object-contain bg-white/10 p-1" loading="lazy" />
                         </CardItem>
                         <div>
-                          <h3 className="text-3xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>Machine Learning Engineer</h3>
+                          <h3 className="text-3xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>Machine Learning Scientist</h3>
                           <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>WAT.ai</p>
                         </div>
                       </div>
@@ -240,7 +242,7 @@ function App() {
         </div>
         <h2
           className="relative z-10 text-white leading-none mb-8"
-          style={{ fontFamily: "'Klein Condensed', sans-serif", fontWeight: 800, fontSize: '4rem' }}
+          style={{ fontFamily: "'Anton', sans-serif", fontWeight: 800, fontSize: '4rem', letterSpacing: '0.03em' }}
         >
           TECH STACK
         </h2>
@@ -253,13 +255,66 @@ function App() {
       <section id="projects" className="fade-in-section flex flex-col items-start justify-start px-25 py-12">
         <h2
           className="text-white leading-none mb-16"
-          style={{ fontFamily: "'Klein Condensed', sans-serif", fontWeight: 800, fontSize: '4rem' }}
+          style={{ fontFamily: "'Anton', sans-serif", fontWeight: 800, fontSize: '4rem', letterSpacing: '0.03em' }}
         >
           PROJECTS
         </h2>
 
         <div className="grid grid-cols-2 gap-8 w-full">
-          {/* Project 1 */}
+          {/* Project 1 - C++ ML Library */}
+          <CardContainer className="w-full" containerClassName="py-0 w-full">
+            <CardBody className="w-full">
+              <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl overflow-hidden">
+                <CardItem translateZ={30} className="w-full">
+                  <img src={cppProject} alt="C++ ML Library" className="w-full h-56 object-contain" loading="lazy" />
+                </CardItem>
+                <div className="p-6">
+                  <h3 className="text-2xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>C++ Machine Learning Library from Scratch</h3>
+                  <p className="text-white/40 text-xs mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>June 2026 - Present</p>
+                  <p className="text-white/80 text-sm mt-3 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    A small machine learning library built from scratch in C++. Implementing classical ML algorithms alongside deep learning components. Built in a PyTorch-style where training loops are explicit and the math behind forward passes, gradient calculations, and parameter updates stays visible.
+                  </p>
+                  <div className="flex items-center gap-4">
+                    <a href="https://github.com/AgentXCross/ml-from-scratch-cpp" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                      View on GitHub
+                    </a>
+                  </div>
+                </div>
+              </CardItem>
+            </CardBody>
+          </CardContainer>
+
+          {/* Project 2 - CourtVision */}
+          <CardContainer className="w-full" containerClassName="py-0 w-full">
+            <CardBody className="w-full">
+              <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl overflow-hidden">
+                <CardItem translateZ={30} className="w-full">
+                  <img src={courtVision} alt="CourtVision" className="w-full h-56 object-contain" loading="lazy" />
+                </CardItem>
+                <div className="p-6">
+                  <h3 className="text-2xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>CourtVision: Computer Vision for Tennis Analytics</h3>
+                  <p className="text-white/40 text-xs mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>April 2026 - May 2026</p>
+                  <ul className="text-white/80 text-sm mt-3 leading-relaxed list-disc list-outside ml-5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <li>Detects and tracks both players and the ball across every frame of a raw match video from the standard TV angle.</li>
+                    <li>Identifies court keypoints and maps the court to a mini-court view.</li>
+                    <li>Detects frames where the ball is struck.</li>
+                    <li>Classifies each shot as a forehand, backhand, or serve using pose estimation.</li>
+                    <li>Computes ball speed and player movement speed.</li>
+                    <li>Renders all of the above back onto the original video.</li>
+                  </ul>
+                  <div className="flex items-center gap-4">
+                    <a href="https://github.com/AgentXCross/Tennis-CV-Analysis" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                      View on GitHub
+                    </a>
+                  </div>
+                </div>
+              </CardItem>
+            </CardBody>
+          </CardContainer>
+
+          {/* Project 3 - HydraLA-Net */}
           <CardContainer className="w-full" containerClassName="py-0 w-full">
             <CardBody className="w-full">
               <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl overflow-hidden">
@@ -292,7 +347,7 @@ function App() {
             </CardBody>
           </CardContainer>
 
-          {/* Project 2 */}
+          {/* Project 4 - ArXtract */}
           <CardContainer className="w-full" containerClassName="py-0 w-full">
             <CardBody className="w-full">
               <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl overflow-hidden">
@@ -324,34 +379,6 @@ function App() {
               </CardItem>
             </CardBody>
           </CardContainer>
-          {/* Project 3 */}
-          <CardContainer className="w-full" containerClassName="py-0 w-full">
-            <CardBody className="w-full">
-              <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl overflow-hidden">
-                <CardItem translateZ={30} className="w-full">
-                  <img src={courtVision} alt="CourtVision" className="w-full h-56 object-contain" loading="lazy" />
-                </CardItem>
-                <div className="p-6">
-                  <h3 className="text-2xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>CourtVision: Computer Vision for Tennis Analytics</h3>
-                  <p className="text-white/40 text-xs mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>April 2026 - May 2026</p>
-                  <ul className="text-white/80 text-sm mt-3 leading-relaxed list-disc list-outside ml-5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    <li>Detects and tracks both players and the ball across every frame of a raw match video from the standard TV angle.</li>
-                    <li>Identifies court keypoints and maps the court to a mini-court view.</li>
-                    <li>Detects frames where the ball is struck.</li>
-                    <li>Classifies each shot as a forehand, backhand, or serve using pose estimation.</li>
-                    <li>Computes ball speed and player movement speed.</li>
-                    <li>Renders all of the above back onto the original video.</li>
-                  </ul>
-                  <div className="flex items-center gap-4">
-                    <a href="https://github.com/AgentXCross/Tennis-CV-Analysis" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'Inter', sans-serif" }}>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                      View on GitHub
-                    </a>
-                  </div>
-                </div>
-              </CardItem>
-            </CardBody>
-          </CardContainer>
         </div>
       </section>
 
@@ -360,7 +387,7 @@ function App() {
         <img src={waterlooSeal} alt="" className="absolute inset-0 w-full h-full object-contain pointer-events-none z-0" style={{ opacity: 0.17 }} />
         <h2
           className="relative z-10 text-white leading-none mb-16"
-          style={{ fontFamily: "'Klein Condensed', sans-serif", fontWeight: 800, fontSize: '4rem' }}
+          style={{ fontFamily: "'Anton', sans-serif", fontWeight: 800, fontSize: '4rem', letterSpacing: '0.03em' }}
         >
           EDUCATION
         </h2>
@@ -448,7 +475,7 @@ function App() {
         <img src={warriorHelm} alt="" className="absolute inset-0 w-full h-full object-contain pointer-events-none z-0" style={{ opacity: 0.25 }} />
         <h2
           className="relative z-10 text-white leading-none mb-16"
-          style={{ fontFamily: "'Klein Condensed', sans-serif", fontWeight: 800, fontSize: '4rem' }}
+          style={{ fontFamily: "'Anton', sans-serif", fontWeight: 800, fontSize: '4rem', letterSpacing: '0.03em' }}
         >
           EXTRACURRICULARS
         </h2>
@@ -558,7 +585,7 @@ function App() {
       <section id="contact" className="fade-in-section flex flex-col items-start justify-start px-25 py-12 relative overflow-hidden">
         <h2
           className="relative z-10 text-white leading-none mb-8"
-          style={{ fontFamily: "'Klein Condensed', sans-serif", fontWeight: 800, fontSize: '4rem' }}
+          style={{ fontFamily: "'Anton', sans-serif", fontWeight: 800, fontSize: '4rem', letterSpacing: '0.03em' }}
         >
           CONTACT
         </h2>
@@ -573,7 +600,7 @@ function App() {
       <footer className="flex justify-end px-25 py-8 border-t border-white/10">
         <h2
           className="leading-none"
-          style={{ fontFamily: "'Klein Condensed', sans-serif", fontWeight: 800, fontSize: '1.5rem', color: '#daff0f' }}
+          style={{ fontFamily: "'Anton', sans-serif", fontWeight: 800, fontSize: '1.5rem', color: '#daff0f' }}
         >
           &middot; BUILT BY MICHAEL LIU &middot;
         </h2>
