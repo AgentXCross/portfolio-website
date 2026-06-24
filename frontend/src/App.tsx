@@ -9,7 +9,7 @@ import { CardContainer, CardBody, CardItem } from "./components/3DCard";
 import { Analytics } from "@vercel/analytics/react";
 
 /* Image Imports */
-import profileImg from "./assets/casual_profile.jpg";
+import profileImg from "./assets/casual_profile.png";
 import wingLeft from "./assets/wing_left.webp";
 import wingRight from "./assets/wing_right.webp";
 import bibsImg from "./assets/bibs.webp";
@@ -325,9 +325,9 @@ function App() {
                   <h3 className="text-2xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>Progressive Optimization of HydraLA-Net for Microaneursym Segmentation</h3>
                   <p className="text-white/40 text-xs mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>Sept 2025 - Feb 2026</p>
                   <ul className="text-white/80 text-sm mt-3 leading-relaxed list-disc list-outside ml-5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    <li>Designed and trained (via SSH) HydraLA-Net (U-Net Variation) models for the semantic segmentation of
+                    <li>Designed and trained HydraLA-Net (U-Net Variation) models for the semantic segmentation of
                         microaneurysms, hemorrhages, soft, and hard exudates from scratch in PyTorch.</li>
-                    <li>Wrote task-specific loss functions (e.g. Focal Tversky) to address class imbalance.</li>
+                    <li>Wrote task-specific loss functions to address class imbalance.</li>
                     <li>Conducted ablation studies on applications of contrast enchancement preprocessing and loss function
                       selection to improve small-lesion segmentation performance.</li>
                     <li>Released Research Paper detailing methodology and results.</li>
