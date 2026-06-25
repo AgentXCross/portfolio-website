@@ -9,7 +9,7 @@ import { CardContainer, CardBody, CardItem } from "./components/3DCard";
 import { Analytics } from "@vercel/analytics/react";
 
 /* Image Imports */
-import profileImg from "./assets/casual_profile.png";
+import profileImg from "./assets/casual_profile.jpg";
 import wingLeft from "./assets/wing_left.webp";
 import wingRight from "./assets/wing_right.webp";
 import bibsImg from "./assets/bibs.webp";
