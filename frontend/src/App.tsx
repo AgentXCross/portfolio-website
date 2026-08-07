@@ -158,7 +158,7 @@ function App() {
                       </div>
                       <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>May 2026 - Aug 2026</p>
                       <p className="text-white/80 text-base mt-3 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
-                        Reaction Generative-Flow Networks
+                        Reaction Generative-Flow Networks & Parallel Synthesis
                       </p>
                     </CardItem>
                   </CardBody>
@@ -285,7 +285,7 @@ function App() {
             </CardBody>
           </CardContainer>
 
-          {/* Project 2 - CourtVision */}
+          {/* Project 2 - CourtHawk */}
           <CardContainer className="w-full" containerClassName="py-0 w-full">
             <CardBody className="w-full">
               <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl overflow-hidden">
@@ -293,8 +293,8 @@ function App() {
                   <img src={courtVision} alt="CourtVision" className="w-full h-56 object-contain" loading="lazy" />
                 </CardItem>
                 <div className="p-6">
-                  <h3 className="text-2xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>CourtVision: Computer Vision for Tennis Analytics</h3>
-                  <p className="text-white/40 text-xs mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>April 2026 - May 2026</p>
+                  <h3 className="text-2xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>CourtHawk: Tennis Player and Ball Tracking</h3>
+                  <p className="text-white/40 text-xs mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>April 2026 - Present</p>
                   <ul className="text-white/80 text-sm mt-3 leading-relaxed list-disc list-outside ml-5" style={{ fontFamily: "'Inter', sans-serif" }}>
                     <li>Detects and tracks both players and the ball across every frame of a raw match video from the standard TV angle.</li>
                     <li>Identifies court keypoints and maps the court to a mini-court view.</li>
