@@ -108,10 +108,7 @@ function App() {
                 >
                   <p>
                     Hi, I’m Michael! I'm currently a 2A BCS Computer Science + Digital Hardware student at the University of Waterloo.
-                    This summer, I'm working at SickKids as a Machine Learning Research Assistant, researching reaction-based generative models
-                    for drug discovery. My primary interests are in Embedded Systems, Machine Learning, and Computer Vision.
-                  </p>
-                  <p className="mt-3">
+                    My primary interests are in Embedded Systems, Machine Learning, and Computer Vision.
                     Outside of academics, I have over four years of experience coaching tennis at Unionville Tennis 
                     Club and I compete as a Varsity Cross-Country athlete for the University of Waterloo.
                   </p>
@@ -293,15 +290,16 @@ function App() {
                   <img src={courtVision} alt="CourtVision" className="w-full h-56 object-contain" loading="lazy" />
                 </CardItem>
                 <div className="p-6">
-                  <h3 className="text-2xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>CourtHawk: Tennis Player and Ball Tracking</h3>
+                  <h3 className="text-2xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>CourtHawk: Tennis Computer Vision System</h3>
                   <p className="text-white/40 text-xs mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>April 2026 - Present</p>
                   <ul className="text-white/80 text-sm mt-3 leading-relaxed list-disc list-outside ml-5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    <li>Detects and tracks both players and the ball across every frame of a raw match video from the standard TV angle.</li>
-                    <li>Identifies court keypoints and maps the court to a mini-court view.</li>
-                    <li>Detects frames where the ball is struck.</li>
-                    <li>Classifies each shot as a forehand, backhand, or serve using pose estimation.</li>
-                    <li>Computes ball speed and player movement speed.</li>
-                    <li>Renders all of the above back onto the original video.</li>
+                    <li>Built an end-to-end computer vision system for tennis footage from the standard TV angle using YOLO,
+                        CNNs, and MediaPipe to track players/ball, detect court keypoints, and estimate player poses.</li>
+                    <li>Developed methods for shot detection and classification using player/ball trajectories and pose derived
+                        features. Projected player/ball onto a bird’s-eye-view court using homography to compute movement and
+                        shot-speed statistics.</li>
+                    <li>Built and deployed a full-stack web app using FastAPI, React, and TypeScript for video upload, processing,
+                        and visualization of results</li>
                   </ul>
                   <div className="flex items-center gap-4">
                     <a href="https://github.com/AgentXCross/Tennis-CV-Analysis" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'Inter', sans-serif" }}>
