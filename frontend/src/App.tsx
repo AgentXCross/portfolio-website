@@ -296,7 +296,8 @@ function App() {
                     <li>Built an end-to-end computer vision system for tennis footage from the standard TV angle using YOLO,
                         CNNs, and MediaPipe to track players/ball, detect court keypoints, and estimate player poses.</li>
                     <li>Developed methods for shot detection and classification using player/ball trajectories and pose derived
-                        features. Projected player/ball onto a bird’s-eye-view court using homography to compute movement and
+                        features.</li>
+                    <li>Projected player/ball onto a bird’s-eye-view court using homography to compute movement and
                         shot-speed statistics.</li>
                     <li>Built and deployed a full-stack web app using FastAPI, React, and TypeScript for video upload, processing,
                         and visualization of results</li>
