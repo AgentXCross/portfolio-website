@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
 @import "tailwindcss";
 
 @font-face {
@@ -21,12 +20,44 @@ body,
   margin: 0;
   padding: 0;
   cursor: url('./assets/cursor.svg'), auto;
-  font-family: 'Inter', sans-serif;
-  font-weight: 510;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
 }
 
 a, button {
   cursor: url('./assets/cursor.svg'), pointer;
+}
+
+.card-corner-glow {
+  position: relative;
+}
+
+.card-corner-glow::before,
+.card-corner-glow::after {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.card-corner-glow::before {
+  top: -2px;
+  left: -2px;
+  border-top: 4px solid #daff0f;
+  border-left: 4px solid #daff0f;
+  border-top-left-radius: 12px;
+  filter: drop-shadow(0 0 6px rgba(218, 255, 15, 0.7));
+}
+
+.card-corner-glow::after {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 4px solid #daff0f;
+  border-right: 4px solid #daff0f;
+  border-bottom-right-radius: 12px;
+  filter: drop-shadow(0 0 6px rgba(218, 255, 15, 0.7));
 }
 
 ::selection {

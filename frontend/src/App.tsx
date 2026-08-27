@@ -1,5 +1,8 @@
 import "./App.css";
 import "@fontsource/anton/400.css";
+import "@fontsource/jetbrains-mono/400.css";
+import "@fontsource/jetbrains-mono/500.css";
+import "@fontsource/jetbrains-mono/800.css";
 import { useEffect } from "react";
 import NavBar from "./components/NavBar";
 import { HoleBackground } from "./components/WormholeBackground";
@@ -17,7 +20,7 @@ import sickKids from "./assets/sickkids.webp";
 import watai from "./assets/watai.png";
 import utc from "./assets/utc.png";
 import arxtract from "./assets/arxtract.webp";
-import courtVision from "./assets/courtvision.png";
+import courtHawk from "./assets/courthawk.png";
 import cppProject from "./assets/cpp_project.png";
 import hydraNet from "./assets/HydraLA-Net.webp";
 import progressiveOptimizationPaper from "./assets/Progressive_Optimization_of_HydraLA_Net_for_Microaneurysm_Segmentation.pdf";
@@ -69,6 +72,12 @@ function App() {
         >
           MICHAEL L.
         </h1>
+        <p
+          className="relative z-20 text-white/80 text-2xl mt-4 text-center"
+          style={{ fontFamily: "'JetBrains Mono', monospace" }}
+        >
+          Computer Science + Digital Hardware @ UWaterloo
+        </p>
 
 
         <div className="relative z-10 mt-4 flex items-center justify-center">
@@ -92,7 +101,7 @@ function App() {
       <section id="about" className="fade-in-section flex flex-col items-start justify-start px-25 py-12 relative overflow-hidden">
         <CardContainer className="relative z-10 w-full" containerClassName="py-0 w-full">
           <CardBody className="w-full">
-            <CardItem translateZ={20} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl p-8">
+            <CardItem translateZ={20} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-8">
               <CardItem translateZ={10} className="w-full">
                 <h2
                   className="text-white leading-none mb-8"
@@ -104,7 +113,7 @@ function App() {
               <div className="flex gap-12 items-start w-full">
                 <div
                   className="text-white/80 text-base leading-relaxed flex-1"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
+                  style={{ fontFamily: "'JetBrains Mono', monospace" }}
                 >
                   <p>
                     Hi, I’m Michael! I'm currently a 2A BCS Computer Science + Digital Hardware student at the University of Waterloo.
@@ -143,18 +152,18 @@ function App() {
               <div className="timeline-card w-1/2 pr-12 text-right">
                 <CardContainer className="w-full" containerClassName="py-0 w-full">
                   <CardBody className="w-full">
-                    <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl p-6">
+                    <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
                       <div className="flex items-center gap-3 justify-end">
                         <div>
-                          <h3 className="text-3xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>Machine Learning Research Assistant</h3>
-                          <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>The Hospital for Sick Children</p>
+                          <h3 className="text-3xl" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>Machine Learning Research Assistant</h3>
+                          <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'JetBrains Mono', monospace" }}>The Hospital for Sick Children</p>
                         </div>
                         <CardItem translateZ={80} className="flex-shrink-0">
                           <img src={sickKids} alt="sick-kids" className="w-22 h-22 rounded-lg object-contain bg-white/10 p-1" loading="lazy" />
                         </CardItem>
                       </div>
-                      <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>May 2026 - Aug 2026</p>
-                      <p className="text-white/80 text-base mt-3 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'JetBrains Mono', monospace" }}>May 2026 - Aug 2026</p>
+                      <p className="text-white/80 text-base mt-3 leading-relaxed" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                         Reaction Generative-Flow Networks & Parallel Synthesis
                       </p>
                     </CardItem>
@@ -178,18 +187,18 @@ function App() {
               <div className="timeline-card timeline-card-right w-1/2 pl-12">
                 <CardContainer className="w-full" containerClassName="py-0 w-full">
                   <CardBody className="w-full">
-                    <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl p-6">
+                    <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
                       <div className="flex items-center gap-3">
                         <CardItem translateZ={80} className="flex-shrink-0">
                           <img src={watai} alt="logo" className="w-22 h-22 rounded-lg object-contain bg-white/10 p-1" loading="lazy" />
                         </CardItem>
                         <div>
-                          <h3 className="text-3xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>Machine Learning Scientist</h3>
-                          <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>WAT.ai</p>
+                          <h3 className="text-3xl" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>Machine Learning Scientist</h3>
+                          <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'JetBrains Mono', monospace" }}>WAT.ai</p>
                         </div>
                       </div>
-                      <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>Sept 2025 - Feb 2026</p>
-                      <p className="text-white/80 text-base mt-3 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Sept 2025 - Feb 2026</p>
+                      <p className="text-white/80 text-base mt-3 leading-relaxed" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                         Semantic Segmentation of Microaneuryms in Fundus Imaging
                       </p>
                     </CardItem>
@@ -203,18 +212,18 @@ function App() {
               <div className="timeline-card w-1/2 pr-12 text-right">
                 <CardContainer className="w-full" containerClassName="py-0 w-full">
                   <CardBody className="w-full">
-                    <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl p-6">
+                    <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
                       <div className="flex items-center gap-3 justify-end">
                         <div>
-                          <h3 className="text-3xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>Tennis Instructor</h3>
-                          <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>Unionville Tennis Club</p>
+                          <h3 className="text-3xl" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>Tennis Instructor</h3>
+                          <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Unionville Tennis Club</p>
                         </div>
                         <CardItem translateZ={80} className="flex-shrink-0">
                           <img src={utc} alt="logo" className="w-22 h-22 rounded-lg object-contain bg-white/10 p-1" loading="lazy" />
                         </CardItem>
                       </div>
-                      <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>Apr 2022 - Aug 2025</p>
-                      <p className="text-white/80 text-base mt-3 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Apr 2022 - Aug 2025</p>
+                      <p className="text-white/80 text-base mt-3 leading-relaxed" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                         TPA Certified Instructor | 500+ Hours On-Court
                       </p>
                     </CardItem>
@@ -261,18 +270,18 @@ function App() {
           {/* Project 1 - C++ ML Library */}
           <CardContainer className="w-full" containerClassName="py-0 w-full">
             <CardBody className="w-full">
-              <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl overflow-hidden">
-                <CardItem translateZ={30} className="w-full">
+              <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow">
+                <CardItem translateZ={30} className="w-full rounded-t-2xl overflow-hidden">
                   <img src={cppProject} alt="C++ ML Library" className="w-full h-56 object-contain" loading="lazy" />
                 </CardItem>
                 <div className="p-6">
-                  <h3 className="text-2xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>C++ Machine Learning Library from Scratch</h3>
-                  <p className="text-white/40 text-xs mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>June 2026 - Present</p>
-                  <p className="text-white/80 text-sm mt-3 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  <h3 className="text-2xl" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>C++ Machine Learning Library from Scratch</h3>
+                  <p className="text-white/40 text-xs mt-2" style={{ fontFamily: "'JetBrains Mono', monospace" }}>June 2026 - Present</p>
+                  <p className="text-white/80 text-sm mt-3 leading-relaxed" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                     A small machine learning library built from scratch in C++. Implementing classical ML algorithms alongside deep learning components. Built in a PyTorch-style where training loops are explicit and the math behind forward passes, gradient calculations, and parameter updates stays visible.
                   </p>
                   <div className="flex items-center gap-4">
-                    <a href="https://github.com/AgentXCross/ml-from-scratch-cpp" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <a href="https://github.com/AgentXCross/ml-from-scratch-cpp" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                       View on GitHub
                     </a>
@@ -285,14 +294,14 @@ function App() {
           {/* Project 2 - CourtHawk */}
           <CardContainer className="w-full" containerClassName="py-0 w-full">
             <CardBody className="w-full">
-              <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl overflow-hidden">
-                <CardItem translateZ={30} className="w-full">
-                  <img src={courtVision} alt="CourtVision" className="w-full h-56 object-contain" loading="lazy" />
+              <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow">
+                <CardItem translateZ={30} className="w-full rounded-t-2xl overflow-hidden">
+                  <img src={courtHawk} alt="CourtHawk" className="w-full h-56 object-contain" loading="lazy" />
                 </CardItem>
                 <div className="p-6">
-                  <h3 className="text-2xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>CourtHawk: Tennis Computer Vision System</h3>
-                  <p className="text-white/40 text-xs mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>April 2026 - Present</p>
-                  <ul className="text-white/80 text-sm mt-3 leading-relaxed list-disc list-outside ml-5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  <h3 className="text-2xl" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>CourtHawk: Tennis Computer Vision System</h3>
+                  <p className="text-white/40 text-xs mt-2" style={{ fontFamily: "'JetBrains Mono', monospace" }}>April 2026 - Present</p>
+                  <ul className="text-white/80 text-sm mt-3 leading-relaxed list-disc list-outside ml-5" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                     <li>Built an end-to-end computer vision system for tennis footage from the standard TV angle using YOLO,
                         CNNs, and MediaPipe to track players/ball, detect court keypoints, and estimate player poses.</li>
                     <li>Developed methods for shot detection and classification using player/ball trajectories and pose derived
@@ -303,7 +312,11 @@ function App() {
                         and visualization of results</li>
                   </ul>
                   <div className="flex items-center gap-4">
-                    <a href="https://github.com/AgentXCross/Tennis-CV-Analysis" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <a href="https://courthawk.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                      Visit the App
+                    </a>
+                    <a href="https://github.com/AgentXCross/Tennis-CV-Analysis" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                       View on GitHub
                     </a>
@@ -316,14 +329,14 @@ function App() {
           {/* Project 3 - HydraLA-Net */}
           <CardContainer className="w-full" containerClassName="py-0 w-full">
             <CardBody className="w-full">
-              <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl overflow-hidden">
-                <CardItem translateZ={30} className="w-full">
+              <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow">
+                <CardItem translateZ={30} className="w-full rounded-t-2xl overflow-hidden">
                   <img src={hydraNet} alt="HydraLA-Net" className="w-full h-56 object-contain" loading="lazy" />
                 </CardItem>
                 <div className="p-6">
-                  <h3 className="text-2xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>Progressive Optimization of HydraLA-Net for Microaneursym Segmentation</h3>
-                  <p className="text-white/40 text-xs mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>Sept 2025 - Feb 2026</p>
-                  <ul className="text-white/80 text-sm mt-3 leading-relaxed list-disc list-outside ml-5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  <h3 className="text-2xl" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>Progressive Optimization of HydraLA-Net for Microaneursym Segmentation</h3>
+                  <p className="text-white/40 text-xs mt-2" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Sept 2025 - Feb 2026</p>
+                  <ul className="text-white/80 text-sm mt-3 leading-relaxed list-disc list-outside ml-5" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                     <li>Designed and trained HydraLA-Net (U-Net Variation) models for the semantic segmentation of
                         microaneurysms, hemorrhages, soft, and hard exudates from scratch in PyTorch.</li>
                     <li>Wrote task-specific loss functions to address class imbalance.</li>
@@ -332,11 +345,11 @@ function App() {
                     <li>Released Research Paper detailing methodology and results.</li>
                   </ul>
                   <div className="flex items-center gap-4">
-                    <a href="https://github.com/jessicayuan1/fundus-image-segmentation" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <a href="https://github.com/jessicayuan1/fundus-image-segmentation" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                       View on GitHub
                     </a>
-                    <a href={progressiveOptimizationPaper} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <a href={progressiveOptimizationPaper} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                       View Paper
                     </a>
@@ -349,14 +362,14 @@ function App() {
           {/* Project 4 - ArXtract */}
           <CardContainer className="w-full" containerClassName="py-0 w-full">
             <CardBody className="w-full">
-              <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl overflow-hidden">
-                <CardItem translateZ={30} className="w-full">
+              <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow">
+                <CardItem translateZ={30} className="w-full rounded-t-2xl overflow-hidden">
                   <img src={arxtract} alt="Arxtract" className="w-full h-56 object-contain" loading="lazy" />
                 </CardItem>
                 <div className="p-6">
-                  <h3 className="text-2xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>ArXtract: AI Search Engine for ML Research</h3>
-                  <p className="text-white/40 text-xs mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>Feb 2026</p>
-                  <ul className="text-white/80 text-sm mt-3 leading-relaxed list-disc list-outside ml-5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  <h3 className="text-2xl" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>ArXtract: AI Search Engine for ML Research</h3>
+                  <p className="text-white/40 text-xs mt-2" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Feb 2026</p>
+                  <ul className="text-white/80 text-sm mt-3 leading-relaxed list-disc list-outside ml-5" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                     <li>Full-stack research tool (React + TypeScript frontend, FastAPI backend) for analyzing machine
                         learning papers through user prompts and arXiv inputs.</li>
                     <li>Built a retrieval-augmented chatbot that answers research questions by ranking paper chunks using embed-
@@ -365,11 +378,11 @@ function App() {
                         paper summaries.</li>
                   </ul>
                   <div className="flex items-center gap-4">
-                    <a href="https://arxtract-cxc.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <a href="https://arxtract-cxc.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                       Visit the App
                     </a>
-                    <a href="https://github.com/AgentXCross/ArXtract_CxC" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <a href="https://github.com/AgentXCross/ArXtract_CxC" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                       View on GitHub
                     </a>
@@ -403,18 +416,18 @@ function App() {
               <div className="timeline-card w-1/2 pr-12 text-right">
                 <CardContainer className="w-full" containerClassName="py-0 w-full">
                   <CardBody className="w-full">
-                    <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl p-6">
+                    <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
                       <div className="flex items-center gap-3 justify-end">
                         <div>
-                          <h3 className="text-3xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>University of Waterloo</h3>
-                          <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>Bachelor of Computer Science - BCS, Computer Science with Digital Hardware Specialization</p>
+                          <h3 className="text-3xl" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>University of Waterloo</h3>
+                          <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Bachelor of Computer Science - BCS, Computer Science with Digital Hardware Specialization</p>
                         </div>
                         <CardItem translateZ={80} className="flex-shrink-0">
                           <img src={waterlooSeal} alt="waterloo" className="w-22 h-22 rounded-lg object-contain bg-white/10 p-1" loading="lazy" />
                         </CardItem>
                       </div>
-                      <p className="text-white/40 text-sm mt-2 text-left" style={{ fontFamily: "'Inter', sans-serif" }}>Sept 2025 - Current</p>
-                      <ul className="text-white/80 text-base mt-3 leading-relaxed text-left list-disc list-outside ml-5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      <p className="text-white/40 text-sm mt-2 text-left" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Sept 2025 - Current</p>
+                      <ul className="text-white/80 text-base mt-3 leading-relaxed text-left list-disc list-outside ml-5" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                         <li>Major Average: 93.1% | Cumulative Average: 92.7% | GPA: 3.98/4.00</li>
                         <li>Hershel and Mary Anne Harris Scholarship, President's Scholarship of Distinction</li>
                         <li>Coursework: Linear Algebra, Functional Programming, Imperative Programming & Data Structures, Calculus, Probability & Statistics</li>
@@ -441,18 +454,18 @@ function App() {
               <div className="timeline-card timeline-card-right w-1/2 pl-12">
                 <CardContainer className="w-full" containerClassName="py-0 w-full">
                   <CardBody className="w-full">
-                    <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl p-6">
+                    <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
                       <div className="flex items-center gap-3">
                         <CardItem translateZ={80} className="flex-shrink-0">
                           <img src={bcss} alt="waterloo" className="w-22 h-22 rounded-lg object-contain bg-white/10 p-1" loading="lazy" />
                         </CardItem>
                         <div>
-                          <h3 className="text-3xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>Bill Crothers Secondary School</h3>
-                          <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>Ontario Secondary School Diploma</p>
+                          <h3 className="text-3xl" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>Bill Crothers Secondary School</h3>
+                          <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Ontario Secondary School Diploma</p>
                         </div>
                       </div>
-                      <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>Aug 2021 - Jun 2025</p>
-                      <ul className="text-white/80 text-base mt-3 leading-relaxed list-disc list-outside ml-5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Aug 2021 - Jun 2025</p>
+                      <ul className="text-white/80 text-base mt-3 leading-relaxed list-disc list-outside ml-5" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                         <li>Graduated 2nd in the Class of 2025 with 99.167% Top 6 Gr 12 Average</li>
                         <li>Academic Accomplishment Award, Excellence in Mathematics Award, Ontario Scholar, Honour Roll</li>
                         <li>8x UWaterloo Math Contest School Champion + Certificate of Distinction</li>
@@ -491,18 +504,18 @@ function App() {
               <div className="timeline-card w-1/2 pr-12 text-right">
                 <CardContainer className="w-full" containerClassName="py-0 w-full">
                   <CardBody className="w-full">
-                    <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl p-6">
+                    <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
                       <div className="flex items-center gap-3 justify-end">
                         <div>
-                          <h3 className="text-3xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>Varsity XC Athlete</h3>
-                          <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>University of Waterloo</p>
+                          <h3 className="text-3xl" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>Varsity XC Athlete</h3>
+                          <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'JetBrains Mono', monospace" }}>University of Waterloo</p>
                         </div>
                         <CardItem translateZ={80} className="flex-shrink-0">
                           <img src={warriorHelm} alt="logo" className="w-22 h-22 rounded-lg object-contain bg-white/10 p-1" loading="lazy" />
                         </CardItem>
                       </div>
-                      <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>Sept 2025 - Current</p>
-                      <p className="text-white/80 text-base mt-3 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Sept 2025 - Current</p>
+                      <p className="text-white/80 text-base mt-3 leading-relaxed" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                         Varsity XC
                       </p>
                     </CardItem>
@@ -526,18 +539,18 @@ function App() {
               <div className="timeline-card timeline-card-right w-1/2 pl-12">
                 <CardContainer className="w-full" containerClassName="py-0 w-full">
                   <CardBody className="w-full">
-                    <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl p-6">
+                    <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
                       <div className="flex items-center gap-3">
                         <CardItem translateZ={80} className="flex-shrink-0">
                           <img src={torontoTrack} alt="logo" className="w-22 h-22 rounded-lg object-contain bg-white/10 p-1" loading="lazy" />
                         </CardItem>
                         <div>
-                          <h3 className="text-3xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>XC & Track Athlete</h3>
-                          <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>University of Toronto Track Club</p>
+                          <h3 className="text-3xl" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>XC & Track Athlete</h3>
+                          <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'JetBrains Mono', monospace" }}>University of Toronto Track Club</p>
                         </div>
                       </div>
-                      <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>July 2022 - August 2025</p>
-                      <p className="text-white/80 text-base mt-3 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'JetBrains Mono', monospace" }}>July 2022 - August 2025</p>
+                      <p className="text-white/80 text-base mt-3 leading-relaxed" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                         1:22:16 Toronto Half Marathon
                       </p>
                     </CardItem>
@@ -551,18 +564,18 @@ function App() {
               <div className="timeline-card w-1/2 pr-12 text-right">
                 <CardContainer className="w-full" containerClassName="py-0 w-full">
                   <CardBody className="w-full">
-                    <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl p-6">
+                    <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
                       <div className="flex items-center gap-3 justify-end">
                         <div>
-                          <h3 className="text-3xl" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800 }}>Tennis Athlete</h3>
-                          <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>Tennis Canada</p>
+                          <h3 className="text-3xl" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>Tennis Athlete</h3>
+                          <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Tennis Canada</p>
                         </div>
                         <CardItem translateZ={80} className="flex-shrink-0">
                           <img src={tennisCanada} alt="logo" className="w-22 h-22 rounded-lg object-contain bg-white/10 p-1" loading="lazy" />
                         </CardItem>
                       </div>
-                      <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'Inter', sans-serif" }}>Mar 2018 - June 2022</p>
-                      <p className="text-white/80 text-base mt-3 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Mar 2018 - June 2022</p>
+                      <p className="text-white/80 text-base mt-3 leading-relaxed" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                         Career Peek Rankings: 48th in Canadian Singles, 25th in Canadian Doubles
                       </p>
                     </CardItem>
@@ -588,7 +601,7 @@ function App() {
         >
           CONTACT
         </h2>
-        <div className="relative z-10 flex flex-col gap-2 text-white/80 text-base leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+        <div className="relative z-10 flex flex-col gap-2 text-white/80 text-base leading-relaxed" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
           <p>Academic Email: m529liu@uwaterloo.ca</p>
           <p>Personal Email: liumichaeler@gmail.com</p>
           <p>Cell Phone: (289)-943-5743</p>
