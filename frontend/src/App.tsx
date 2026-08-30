@@ -1,20 +1,21 @@
-import "./App.css";
+/*
+App.tsx
+
+Main application component.
+*/
+
 import "@fontsource/anton/400.css";
 import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/500.css";
 import "@fontsource/jetbrains-mono/800.css";
 import { useEffect } from "react";
-import NavBar from "./components/NavBar";
-import { HoleBackground } from "./components/WormholeBackground";
+import NavBar from "./sections/NavBar";
+import Hero from "./sections/Hero";
 import SkillDock from "./components/SkillDock";
 import { MatrixBackground } from "./components/MatrixBackground";
 import { CardContainer, CardBody, CardItem } from "./components/3DCard";
 import { Analytics } from "@vercel/analytics/react";
 
-/* Image Imports */
-import profileImg from "./assets/casual_profile.jpg";
-import wingLeft from "./assets/wing_left.webp";
-import wingRight from "./assets/wing_right.webp";
 import bibsImg from "./assets/bibs.webp";
 import sickKids from "./assets/sickkids.webp";
 import watai from "./assets/watai.png";
@@ -38,64 +39,52 @@ import tennisCanada from "./assets/tenniscanada.svg";
 import uttcTeam from "./assets/uoftteam.webp";
 import avivaCentre from "./assets/avivacentre.webp";
 
-function App() {
-  useEffect(() => {
-    const sections = document.querySelectorAll('.fade-in-section');
+
+export default function App() {
+  /* 
+  Scrolling fade-in. Adding fade-in-section to an element causes it to 
+  fade-in when it enters the viewport. Occurs once after the component first renders.
+  */
+  useEffect(function setupFadeIn() {
+    const sections = document.querySelectorAll(".fade-in-section");
+
+    function handleEntry(entry: IntersectionObserverEntry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    }
+
+    function handleIntersections(entries: IntersectionObserverEntry[]) {
+      for (const entry of entries) {
+        handleEntry(entry);
+      }
+    }
+
+    function observeSection(section: Element) {
+      observer.observe(section);
+    }
+
+    // Watch sections and fade-in when each section is 10% visible
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
+      handleIntersections,
       { threshold: 0.1 }
     );
 
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+    for (const section of sections) {
+      observeSection(section);
+    }
+
+    function cleanup() {
+      observer.disconnect();
+    }
+
+    return cleanup;
   }, []);
+  
   return (
     <div className="text-white" style={{ backgroundColor: '#000000' }}>
       <NavBar />
-      {/* Hero */}
-      <section id="hero" className="flex flex-col items-center justify-start px-16 pt-24 pb-16 relative overflow-hidden">
-        <HoleBackground className="absolute inset-0" />
-        <h1
-          className="relative z-20 leading-none"
-          style={{
-            fontFamily: "'Anton', sans-serif",
-            fontWeight: 700,
-            fontSize: "12rem",
-            letterSpacing: "0.03em"
-          }}
-        >
-          MICHAEL L.
-        </h1>
-        <p
-          className="relative z-20 text-white/80 text-2xl mt-4 text-center"
-          style={{ fontFamily: "'JetBrains Mono', monospace" }}
-        >
-          Computer Science + Digital Hardware @ UWaterloo
-        </p>
-
-
-        <div className="relative z-10 mt-4 flex items-center justify-center">
-          <img
-            src={wingLeft}
-            alt=""
-            className="absolute object-contain mix-blend-screen"
-            style={{ height: '475px', maxWidth: 'none', maxHeight: 'none', right: '-50%', top: '28%', transform: 'translateY(-50%) translateX(20%)' }}
-          />
-          <img src={profileImg} alt="Michael L." className="h-80 rounded-full relative z-10" />
-          <img
-            src={wingRight}
-            alt=""
-            className="absolute object-contain mix-blend-screen"
-            style={{ height: '475px', maxWidth: 'none', maxHeight: 'none', left: '-50%', top: '28%', transform: 'translateY(-50%) translateX(-20%)' }}
-          />
-        </div>
-      </section>
+      <Hero />
 
       {/* About Me */}
       <section id="about" className="fade-in-section flex flex-col items-start justify-start px-25 py-12 relative overflow-hidden">
@@ -624,4 +613,3 @@ function App() {
   );
 }
 
-export default App;
