@@ -1,0 +1,87 @@
+.hero {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center childrem horizontally*/
+  justify-content: flex-start; /* Put children at the top */
+
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.wormhole-background {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-title {
+  position: relative;
+  z-index: 20;
+  line-height: 1;
+
+  font-family: "Anton", sans-serif;
+  font-weight: 700;
+  font-size: clamp(3rem, 16vw, 12rem);
+  letter-spacing: 0.03em;
+}
+
+.hero-subtitle {
+  position: relative;
+  z-index: 20;
+
+  color: rgb(255 255 255 / 0.8);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+
+  font-family: "JetBrains Mono", monospace;
+}
+
+@media (max-width: 660px) {
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
+
+.hero-graphics {
+  position: relative;
+  z-index: 10;
+  margin-top: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-wing {
+  position: absolute;
+  object-fit: contain;
+
+  height: 475px;
+  max-width: none;
+  max-height: none;
+
+  top: 28%;
+}
+
+.hero-wing-left {
+  right: -50%;
+  transform: translateY(-50%) translateX(20%);
+}
+
+.hero-wing-right {
+  left: -50%;
+  transform: translateY(-50%) translateX(-20%);
+}
+
+.hero-profile {
+  height: 20rem;
+  border-radius: 9999px;
+
+  position: relative;
+  z-index: 10;
+}

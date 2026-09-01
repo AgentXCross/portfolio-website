@@ -6,6 +6,14 @@ Global styles.
 
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('/fonts/anton-400.woff2') format('woff2');
+}
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -102,39 +110,6 @@ a, button {
   transform: translateY(0);
 }
 
-#hero h1 {
-  font-size: 12rem;
-}
-
-@media (max-width: 990px) {
-  #hero h1 {
-    font-size: 10rem;
-  }
-}
-
-@media (max-width: 880px) {
-  #hero h1 {
-    font-size: 8rem;
-  }
-}
-
-@media (max-width: 700px) {
-  #hero h1 {
-    font-size: 6rem;
-  }
-}
-
-@media (max-width: 520px) {
-  #hero h1 {
-    font-size: 5rem;
-  }
-}
-
-@media (max-width: 440px) {
-  #hero h1 {
-    font-size: 4.2rem;
-  }
-}
 
 @media (max-width: 930px) {
   section h2 {
@@ -187,16 +162,48 @@ a, button {
   }
 }
 
-@media (max-width: 1090px) {
-  .about-img {
-    display: none;
-  }
-}
-
 @media (max-width: 900px) {
   #projects .grid {
     grid-template-columns: 1fr;
   }
+}
+
+.timeline-line {
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+  bottom: 0;
+
+  border-left: 6px dotted rgb(255 255 255 / 0.5);
+
+  transform: translateX(-50%);
+}
+
+.timeline-items {
+  position: relative;
+  display: flex;
+  gap: 4rem;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-card {
+  width: 50%;
+}
+
+.timeline-card-left {
+  padding-right: 3rem;
+  text-align: right;
+}
+
+.timeline-card-right {
+  padding-left: 3rem;
+  text-align: left;
 }
 
 @media (max-width: 1000px) {

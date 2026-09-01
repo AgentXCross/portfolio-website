@@ -1,72 +1,72 @@
 .nav-bar {
-    position: fixed; /* NavBar stays put while scrolling */
-    top: 0; /* Stick to the top and to the left */
-    left: 0;
-    width: 100%; /* Span the entire width of the screen */
-    z-index: 50; /* Put it in front of everything else */
+  position: fixed; /* NavBar stays put while scrolling */
+  top: 0; /* Stick to the top and to the left */
+  left: 0;
+  width: 100%; /* Span the entire width of the screen */
+  z-index: 50; /* Put it in front of everything else */
 
-    background: linear-gradient(to bottom, #0006b9 0%, #000000 100%);
+  background: linear-gradient(to bottom, #0006b9 0%, #000000 100%);
 }
 
 .nav-content { /* Layout of the contents inside of the nav-bar */
-    width: 100%;
-    max-width: 72rem;
-    margin-left: auto; /* Automatically calculate margins given remaining space to evenly distribute it*/
-    margin-right: auto;
-    display: flex; /* Display children using Flexbox layout system */
-    align-items: center;
-    justify-content: space-between; /* Spread items in the flex across all possible space */
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+  width: 100%;
+  max-width: 72rem;
+  margin-left: auto; /* Automatically calculate margins given remaining space to evenly distribute it*/
+  margin-right: auto;
+  display: flex; /* Display children using Flexbox layout system */
+  align-items: center;
+  justify-content: space-between; /* Spread items in the flex across all possible space */
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .nav-name {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 0;
-    color: var(--neon-yellow);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--neon-yellow);
 }
 
 .nav-sections {
-    display: none;
-    align-items: center;
-    gap: 1.5rem;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 1.0rem;
-    font-weight: 400;
-    color: var(--neon-yellow);
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.0rem;
+  font-weight: 400;
+  color: var(--neon-yellow);
 }
 
 @media (min-width: 830px) { /* Apply when at least 800px width */
-    .nav-sections {
-        display: flex;
-    }
+  .nav-sections {
+    display: flex;
+  }
 }
 
 .nav-section-link {
-    font-weight: 400;
-    font-size: 1.125rem;
-    letter-spacing: 0.001rem;
-    transition: opacity 150ms; /* Slowly transition during opacity change */
+  font-weight: 400;
+  font-size: 1.125rem;
+  letter-spacing: 0.001rem;
+  transition: opacity 150ms; /* Slowly transition during opacity change */
 }
 
 .nav-section-link:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 @media (max-width: 910px) { /* Apply when the width is below 890px */
-    .nav-section-link {
-        font-size: 0.9rem;
-    }
+  .nav-section-link {
+    font-size: 0.9rem;
+  }
 }
 
 .nav-socials {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 .nav-social-link {

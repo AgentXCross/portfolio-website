@@ -4,19 +4,21 @@ App.tsx
 Main application component.
 */
 
-import "@fontsource/anton/400.css";
 import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/500.css";
 import "@fontsource/jetbrains-mono/800.css";
+
 import { useEffect } from "react";
+
 import NavBar from "./sections/NavBar";
 import Hero from "./sections/Hero";
+import AboutMe from "./sections/AboutMe"
+
 import SkillDock from "./components/SkillDock";
 import { MatrixBackground } from "./components/MatrixBackground";
-import { CardContainer, CardBody, CardItem } from "./components/3DCard";
+import { Card, CardItem } from "./components/Card";
 import { Analytics } from "@vercel/analytics/react";
 
-import bibsImg from "./assets/bibs.webp";
 import sickKids from "./assets/sickkids.webp";
 import watai from "./assets/watai.png";
 import utc from "./assets/utc.png";
@@ -85,40 +87,7 @@ export default function App() {
     <div className="text-white" style={{ backgroundColor: '#000000' }}>
       <NavBar />
       <Hero />
-
-      {/* About Me */}
-      <section id="about" className="fade-in-section flex flex-col items-start justify-start px-25 py-12 relative overflow-hidden">
-        <CardContainer className="relative z-10 w-full" containerClassName="py-0 w-full">
-          <CardBody className="w-full">
-            <CardItem translateZ={20} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-8">
-              <CardItem translateZ={10} className="w-full">
-                <h2
-                  className="text-white leading-none mb-8"
-                  style={{ fontFamily: "'Anton', sans-serif", fontWeight: 800, fontSize: '4rem', letterSpacing: '0.03em' }}
-                >
-                  ABOUT ME
-                </h2>
-              </CardItem>
-              <div className="flex gap-12 items-start w-full">
-                <div
-                  className="text-white/80 text-base leading-relaxed flex-1"
-                  style={{ fontFamily: "'JetBrains Mono', monospace" }}
-                >
-                  <p>
-                    Hi, I’m Michael! I'm currently a 2A BCS Computer Science + Digital Hardware student at the University of Waterloo.
-                    My primary interests are in Embedded Systems, Machine Learning, and Computer Vision.
-                    Outside of academics, I have over four years of experience coaching tennis at Unionville Tennis 
-                    Club and I compete as a Varsity Cross-Country athlete for the University of Waterloo.
-                  </p>
-                </div>
-                <CardItem translateZ={30} className="flex-shrink-0 about-img">
-                  <img src={bibsImg} alt="" className="w-96 rounded-4xl object-cover" loading="lazy" />
-                </CardItem>
-              </div>
-            </CardItem>
-          </CardBody>
-        </CardContainer>
-      </section>
+      <AboutMe />
 
       {/* Work Experience */}
       <section id="experience" className="fade-in-section flex flex-col items-start justify-start px-25 py-12">
@@ -139,8 +108,7 @@ export default function App() {
             {/* Item 1 - Left */}
             <div className="timeline-item relative flex items-center">
               <div className="timeline-card w-1/2 pr-12 text-right">
-                <CardContainer className="w-full" containerClassName="py-0 w-full">
-                  <CardBody className="w-full">
+                <Card className="w-full" containerClassName="py-0 w-full">
                     <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
                       <div className="flex items-center gap-3 justify-end">
                         <div>
@@ -156,8 +124,7 @@ export default function App() {
                         Reaction Generative-Flow Networks & Parallel Synthesis
                       </p>
                     </CardItem>
-                  </CardBody>
-                </CardContainer>
+                </Card>
               </div>
               {/* Dot */}
               <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
@@ -174,8 +141,7 @@ export default function App() {
               {/* Dot */}
               <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
               <div className="timeline-card timeline-card-right w-1/2 pl-12">
-                <CardContainer className="w-full" containerClassName="py-0 w-full">
-                  <CardBody className="w-full">
+                <Card className="w-full" containerClassName="py-0 w-full">
                     <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
                       <div className="flex items-center gap-3">
                         <CardItem translateZ={80} className="flex-shrink-0">
@@ -191,16 +157,14 @@ export default function App() {
                         Semantic Segmentation of Microaneuryms in Fundus Imaging
                       </p>
                     </CardItem>
-                  </CardBody>
-                </CardContainer>
+                </Card>
               </div>
             </div>
 
             {/* Item 3 - Left */}
             <div className="timeline-item relative flex items-center">
               <div className="timeline-card w-1/2 pr-12 text-right">
-                <CardContainer className="w-full" containerClassName="py-0 w-full">
-                  <CardBody className="w-full">
+                <Card className="w-full" containerClassName="py-0 w-full">
                     <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
                       <div className="flex items-center gap-3 justify-end">
                         <div>
@@ -216,8 +180,7 @@ export default function App() {
                         TPA Certified Instructor | 500+ Hours On-Court
                       </p>
                     </CardItem>
-                  </CardBody>
-                </CardContainer>
+                </Card>
               </div>
               {/* Dot */}
               <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
@@ -257,8 +220,7 @@ export default function App() {
 
         <div className="grid grid-cols-2 gap-8 w-full">
           {/* Project 1 - C++ ML Library */}
-          <CardContainer className="w-full" containerClassName="py-0 w-full">
-            <CardBody className="w-full">
+          <Card className="w-full" containerClassName="py-0 w-full">
               <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow">
                 <CardItem translateZ={30} className="w-full rounded-t-2xl overflow-hidden">
                   <img src={cppProject} alt="C++ ML Library" className="w-full h-56 object-contain" loading="lazy" />
@@ -277,12 +239,10 @@ export default function App() {
                   </div>
                 </div>
               </CardItem>
-            </CardBody>
-          </CardContainer>
+          </Card>
 
           {/* Project 2 - CourtHawk */}
-          <CardContainer className="w-full" containerClassName="py-0 w-full">
-            <CardBody className="w-full">
+          <Card className="w-full" containerClassName="py-0 w-full">
               <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow">
                 <CardItem translateZ={30} className="w-full rounded-t-2xl overflow-hidden">
                   <img src={courtHawk} alt="CourtHawk" className="w-full h-56 object-contain" loading="lazy" />
@@ -312,12 +272,10 @@ export default function App() {
                   </div>
                 </div>
               </CardItem>
-            </CardBody>
-          </CardContainer>
+          </Card>
 
           {/* Project 3 - HydraLA-Net */}
-          <CardContainer className="w-full" containerClassName="py-0 w-full">
-            <CardBody className="w-full">
+          <Card className="w-full" containerClassName="py-0 w-full">
               <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow">
                 <CardItem translateZ={30} className="w-full rounded-t-2xl overflow-hidden">
                   <img src={hydraNet} alt="HydraLA-Net" className="w-full h-56 object-contain" loading="lazy" />
@@ -345,12 +303,10 @@ export default function App() {
                   </div>
                 </div>
               </CardItem>
-            </CardBody>
-          </CardContainer>
+          </Card>
 
           {/* Project 4 - ArXtract */}
-          <CardContainer className="w-full" containerClassName="py-0 w-full">
-            <CardBody className="w-full">
+          <Card className="w-full" containerClassName="py-0 w-full">
               <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow">
                 <CardItem translateZ={30} className="w-full rounded-t-2xl overflow-hidden">
                   <img src={arxtract} alt="Arxtract" className="w-full h-56 object-contain" loading="lazy" />
@@ -378,8 +334,7 @@ export default function App() {
                   </div>
                 </div>
               </CardItem>
-            </CardBody>
-          </CardContainer>
+          </Card>
         </div>
       </section>
 
@@ -403,8 +358,7 @@ export default function App() {
             {/* Item 1 - Left */}
             <div className="timeline-item relative flex items-center">
               <div className="timeline-card w-1/2 pr-12 text-right">
-                <CardContainer className="w-full" containerClassName="py-0 w-full">
-                  <CardBody className="w-full">
+                <Card className="w-full" containerClassName="py-0 w-full">
                     <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
                       <div className="flex items-center gap-3 justify-end">
                         <div>
@@ -423,8 +377,7 @@ export default function App() {
                         <li>Varsity XC, WAT.ai Design Team</li>
                       </ul>
                     </CardItem>
-                  </CardBody>
-                </CardContainer>
+                </Card>
               </div>
               {/* Dot */}
               <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
@@ -441,8 +394,7 @@ export default function App() {
               {/* Dot */}
               <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
               <div className="timeline-card timeline-card-right w-1/2 pl-12">
-                <CardContainer className="w-full" containerClassName="py-0 w-full">
-                  <CardBody className="w-full">
+                <Card className="w-full" containerClassName="py-0 w-full">
                     <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
                       <div className="flex items-center gap-3">
                         <CardItem translateZ={80} className="flex-shrink-0">
@@ -462,8 +414,7 @@ export default function App() {
                         <li>Subject Awards: Calculus & Vectors, Advanced Functions, English, Gym Leadership, Chemistry, Physics</li>
                       </ul>
                     </CardItem>
-                  </CardBody>
-                </CardContainer>
+                </Card>
               </div>
             </div>
 
@@ -491,8 +442,7 @@ export default function App() {
             {/* Item 1 - Left */}
             <div className="timeline-item relative flex items-center">
               <div className="timeline-card w-1/2 pr-12 text-right">
-                <CardContainer className="w-full" containerClassName="py-0 w-full">
-                  <CardBody className="w-full">
+                <Card className="w-full" containerClassName="py-0 w-full">
                     <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
                       <div className="flex items-center gap-3 justify-end">
                         <div>
@@ -508,8 +458,7 @@ export default function App() {
                         Varsity XC
                       </p>
                     </CardItem>
-                  </CardBody>
-                </CardContainer>
+                </Card>
               </div>
               {/* Dot */}
               <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
@@ -526,8 +475,7 @@ export default function App() {
               {/* Dot */}
               <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
               <div className="timeline-card timeline-card-right w-1/2 pl-12">
-                <CardContainer className="w-full" containerClassName="py-0 w-full">
-                  <CardBody className="w-full">
+                <Card className="w-full" containerClassName="py-0 w-full">
                     <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
                       <div className="flex items-center gap-3">
                         <CardItem translateZ={80} className="flex-shrink-0">
@@ -543,16 +491,14 @@ export default function App() {
                         1:22:16 Toronto Half Marathon
                       </p>
                     </CardItem>
-                  </CardBody>
-                </CardContainer>
+                </Card>
               </div>
             </div>
 
             {/* Item 3 - Left */}
             <div className="timeline-item relative flex items-center">
               <div className="timeline-card w-1/2 pr-12 text-right">
-                <CardContainer className="w-full" containerClassName="py-0 w-full">
-                  <CardBody className="w-full">
+                <Card className="w-full" containerClassName="py-0 w-full">
                     <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
                       <div className="flex items-center gap-3 justify-end">
                         <div>
@@ -568,8 +514,7 @@ export default function App() {
                         Career Peek Rankings: 48th in Canadian Singles, 25th in Canadian Doubles
                       </p>
                     </CardItem>
-                  </CardBody>
-                </CardContainer>
+                </Card>
               </div>
               {/* Dot */}
               <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />

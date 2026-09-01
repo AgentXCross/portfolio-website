@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 'use client';
 
 import * as React from 'react';
@@ -7,14 +5,14 @@ import { motion } from 'motion/react';
 
 import { cn } from '@/lib/utils';
 
-type HoleBackgroundProps = React.ComponentProps<'div'> & {
+type WormholeBackgroundProps = React.ComponentProps<'div'> & {
   strokeColor?: string;
   numberOfLines?: number;
   numberOfDiscs?: number;
   particleRGBColor?: [number, number, number];
 };
 
-function HoleBackground({
+function WormholeBackground({
   strokeColor = '#daff0f',
   numberOfLines = 50,
   numberOfDiscs = 50,
@@ -22,7 +20,7 @@ function HoleBackground({
   className,
   children,
   ...props
-}: HoleBackgroundProps) {
+}: WormholeBackgroundProps) {
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
   const animationFrameIdRef = React.useRef<number>(0);
   const stateRef = React.useRef<any>({
@@ -353,4 +351,4 @@ function HoleBackground({
   );
 }
 
-export { HoleBackground, type HoleBackgroundProps };
+export { WormholeBackground, type WormholeBackgroundProps };

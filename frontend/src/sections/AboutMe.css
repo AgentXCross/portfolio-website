@@ -1,0 +1,73 @@
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card-outer {
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.about-card-inner {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: 2rem;
+}
+
+.card-item.about-title-container {
+  width: 100%;
+}
+
+.about-title {
+  color: white;
+  line-height: 1;
+  margin-bottom: 2rem;
+
+  font-family: "Anton", sans-serif;
+  font-weight: 800;
+  font-size: 4rem;
+  letter-spacing: 0.03em;
+}
+
+.about-content {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.about-text {
+  color: rgb(255 255 255 / 0.9);
+  font-size: 1rem;
+  line-height: 1.625;
+  flex: 1; /* Allowed to grow and take over leftover space */
+  font-family: "JetBrains Mono", monospace;
+}
+
+.about-image-container {
+  flex-shrink: 0;
+}
+
+.about-image {
+  width: 24rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+@media (max-width: 1090px) {
+  .about-image {
+    display: none;
+  }
+}

@@ -1,0 +1,58 @@
+.card-outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  position: relative;
+
+  background-color: rgb(33, 33, 33);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+
+  transition: transform 200ms ease;
+}
+
+.card:hover {
+  transform: scale(1.125);
+}
+
+/* before and after live directly on .card (the element with the visible
+   background/border), so they're always pixel-aligned to the card's real edges. */
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.card::before {
+  top: -2px;
+  left: -2px;
+  border-top: 5px solid var(--neon-yellow);
+  border-left: 5px solid var(--neon-yellow);
+  border-top-left-radius: 12px;
+  filter: drop-shadow(0 0 6px rgba(218, 255, 15, 0.7));
+}
+
+.card::after {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 5px solid var(--neon-yellow);
+  border-right: 5px solid var(--neon-yellow);
+  border-bottom-right-radius: 12px;
+  filter: drop-shadow(0 0 6px rgba(218, 255, 15, 0.7));
+}
+
+.card-item {
+  width: fit-content;
+}
