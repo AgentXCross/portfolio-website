@@ -1,0 +1,35 @@
+.macos-dock {
+  backdrop-filter: blur(12px);
+  background: rgba(45, 45, 45, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.macos-dock-items {
+  position: relative;
+  width: 100%;
+}
+
+.macos-dock-item {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  bottom: 0;
+  transform-origin: bottom center;
+}
+
+.macos-dock-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+  border-radius: 0.75rem;
+}
+
+.macos-dock-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

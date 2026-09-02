@@ -1,0 +1,124 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (max-width: 850px) {
+  .projects {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.projects-title {
+  color: white;
+  line-height: 1;
+  margin-bottom: 4rem;
+
+  font-family: "Anton", sans-serif;
+  font-weight: 800;
+  font-size: 4rem;
+  letter-spacing: 0.03em;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card-container {
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.project-card {
+  width: 100%;
+}
+
+.project-thumbnail {
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  overflow: hidden;
+}
+
+.project-thumbnail-img {
+  width: 100%;
+  height: 14rem;
+  object-fit: contain;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.project-date {
+  color: rgb(255 255 255 / 0.4);
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.project-description {
+  color: rgb(255 255 255 / 0.8);
+  font-size: 0.875rem;
+  margin-top: 0.75rem;
+  line-height: 1.625;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.project-list {
+  color: rgb(255 255 255 / 0.8);
+  font-size: 0.875rem;
+  margin-top: 0.75rem;
+  line-height: 1.625;
+  font-family: "JetBrains Mono", monospace;
+
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-left: 1.25rem;
+}
+
+.project-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+
+  color: rgb(255 255 255 / 0.6);
+  font-size: 0.875rem;
+  font-family: "JetBrains Mono", monospace;
+  transition: color 150ms;
+}
+
+.project-link:hover {
+  color: white;
+}

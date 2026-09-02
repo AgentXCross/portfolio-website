@@ -4,7 +4,37 @@ index.css
 Global styles.
 */
 
-@import "tailwindcss";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote {
+  margin: 0;
+}
+
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+img, svg, video, canvas {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
 
 @font-face {
   font-family: 'Anton';
@@ -29,6 +59,7 @@ body,
   cursor: url('./assets/cursor.svg'), auto;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 500;
+  color: white;
 }
 
 :root{
@@ -80,7 +111,7 @@ a, button {
 }
 
 ::selection {
-  background-color: #FF1493;
+  background-color: #0003ab;
   color: black;
 }
 
@@ -129,11 +160,6 @@ a, button {
 }
 
 @media (max-width: 575px) {
-  section:not(#hero) {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
   section h2 {
     margin-bottom: 3.2rem;
   }
@@ -151,75 +177,8 @@ a, button {
   }
 
   .skills-title {
-    top: -0.85rem;
+    top: -1rem;
   }
 }
 
-@media (max-width: 850px) {
-  section, footer {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-}
 
-@media (max-width: 900px) {
-  #projects .grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.timeline-line {
-  position: absolute;
-
-  left: 50%;
-  top: 0;
-  bottom: 0;
-
-  border-left: 6px dotted rgb(255 255 255 / 0.5);
-
-  transform: translateX(-50%);
-}
-
-.timeline-items {
-  position: relative;
-  display: flex;
-  gap: 4rem;
-}
-
-.timeline-item {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.timeline-card {
-  width: 50%;
-}
-
-.timeline-card-left {
-  padding-right: 3rem;
-  text-align: right;
-}
-
-.timeline-card-right {
-  padding-left: 3rem;
-  text-align: left;
-}
-
-@media (max-width: 1000px) {
-  .timeline-img,
-  .timeline-dot,
-  .timeline-line {
-    display: none;
-  }
-
-  .timeline-item {
-    display: block;
-  }
-
-  .timeline-card {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}

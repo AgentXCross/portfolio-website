@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react"
-import { cn } from "@/lib/utils"
 
-export interface MatrixBackgroundProps {
+import "./MatrixBackground.css"
+
+export interface MatrixBackgroundProperties {
   className?: string
   children?: React.ReactNode
   fontSize?: number
@@ -18,7 +19,7 @@ interface Column {
   length: number
 }
 
-const DEFAULT_CHARSET = "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ0123456789"
+const DEFAULT_CHARSET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
 export function MatrixBackground({
   className,
@@ -27,7 +28,7 @@ export function MatrixBackground({
   speed = 1,
   color = "#00ff00",
   charset = DEFAULT_CHARSET,
-}: MatrixBackgroundProps) {
+}: MatrixBackgroundProperties) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
 
@@ -144,9 +145,20 @@ export function MatrixBackground({
   }, [fontSize, speed, color, charset])
 
   return (
-    <div ref={containerRef} className={cn("absolute inset-0 overflow-hidden", className)}>
-      <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
-      {children && <div className="relative z-10 h-full w-full">{children}</div>}
+    <div
+      ref={containerRef}
+      className={`matrix-background ${className ?? ""}`}
+    >
+      <canvas
+        ref={canvasRef}
+        className="matrix-background-canvas"
+      />
+
+      {children && (
+        <div className="matrix-background-content">
+          {children}
+        </div>
+      )}
     </div>
   )
 }

@@ -1,0 +1,18 @@
+.stack-dock {
+  width: 100%;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.stack-dock::-webkit-scrollbar {
+  display: none;
+}
+
+.stack-dock-content {
+  display: flex;
+  justify-content: center;
+  min-width: fit-content;
+}

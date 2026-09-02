@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { motion } from 'motion/react';
 
-import { cn } from '@/lib/utils';
+import './WormholeBackground.css';
 
 type WormholeBackgroundProps = React.ComponentProps<'div'> & {
   strokeColor?: string;
@@ -322,31 +322,24 @@ function WormholeBackground({
 
   return (
     <div
-      data-slot="hole-background"
-      className={cn(
-        'relative size-full overflow-hidden',
-        'before:content-[""] before:absolute before:top-1/2 before:left-1/2 before:block before:size-[140%] dark:before:[background:radial-gradient(ellipse_at_50%_55%,transparent_10%,black_50%)] before:[background:radial-gradient(ellipse_at_50%_55%,transparent_10%,white_50%)] before:[transform:translate3d(-50%,-50%,0)]',
-        'after:content-[""] after:absolute after:z-[5] after:top-1/2 after:left-1/2 after:block after:size-full after:[background:radial-gradient(ellipse_at_50%_75%,#daff0f_20%,transparent_75%)] after:[transform:translate3d(-50%,-50%,0)] after:mix-blend-overlay',
-        className,
-      )}
+      className={`wormhole ${className ?? ''}`}
       {...props}
     >
       {children}
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 block size-full dark:opacity-5 opacity-5"
+        className="wormhole-canvas"
       />
       <motion.div
-        className="absolute top-[-71.5%] left-1/2 z-[3] w-[30%] h-[140%] rounded-b-full blur-3xl opacity-10 dark:mix-blend-plus-lighter mix-blend-plus-darker [transform:translate3d(-50%,0,0)] [background-size:100%_200%]"
+        className="wormhole-beam"
         style={{
           background: 'linear-gradient(20deg, #daff0f, rgba(218,255,15,0.12) 16.5%, #daff0f 33%, rgba(218,255,15,0.12) 49.5%, #daff0f 66%, rgba(218,255,15,0.38) 85.5%, #daff0f 100%)',
-          backgroundSize: '100% 200%',
           backgroundPosition: '0% 100%',
         }}
         animate={{ backgroundPosition: '0% 300%' }}
         transition={{ duration: 5, ease: 'linear', repeat: Infinity }}
       />
-      <div className="absolute top-0 left-0 z-[7] size-full dark:[background:repeating-linear-gradient(transparent,transparent_1px,white_1px,white_2px)] mix-blend-overlay opacity-50" />
+      <div className="wormhole-scanlines" />
     </div>
   );
 }

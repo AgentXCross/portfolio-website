@@ -1,3 +1,5 @@
+import "./StackDock.css";
+
 import MacOSDock, { type DockItem } from "./MacOSDock";
 
 import cppIcon from "../assets/C++.svg";
@@ -23,7 +25,7 @@ import latexIcon from "../assets/latex.svg";
 import opencvIcon from "../assets/opencv.svg";
 import scipyIcon from "../assets/scipy.svg";
 
-const skills: DockItem[] = [
+const stack: DockItem[] = [
   { id: "c++", icon: cppIcon},
   { id: "c", icon: cIcon },
   { id: "python", icon: pythonIcon },
@@ -48,11 +50,11 @@ const skills: DockItem[] = [
   { id: "scipy", icon: scipyIcon },
 ];
 
-export default function SkillDock() {
+export default function StackDock() {
   return (
-    <div className="w-full py-3 overflow-x-auto scrollbar-hide">
-      <div className="flex justify-center min-w-fit">
-        <MacOSDock items={skills} />
+    <div className="stack-dock">
+      <div className="stack-dock-content">
+        <MacOSDock items={stack} />
       </div>
     </div>
   );

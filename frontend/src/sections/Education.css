@@ -1,4 +1,4 @@
-.experience {
+.education {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -8,77 +8,87 @@
   padding-right: 6.25rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
+
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 850px) {
-  .experience {
+  .education {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
 }
 
-.experience-title {
+.education-seal {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.17;
+}
+
+.education-title {
+  position: relative;
+  z-index: 10;
+
   color: white;
   line-height: 1;
   margin-bottom: 4rem;
 
   font-family: "Anton", sans-serif;
-  font-weight: 400;
+  font-weight: 800;
   font-size: 4rem;
   letter-spacing: 0.03em;
 }
 
-.experience-container {
+.education-container {
   position: relative;
   width: 100%;
 }
 
-.experience-card-container {
+.education-card-container {
   width: 100%;
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.experience-card {
+.education-card {
   width: 100%;
-}
-
-.experience-card-content {
-  width: 100%;
-  background-color: rgb(33, 33, 33);
-  border: 2px solid rgb(255 255 255 / 0.1);
-  border-radius: 1rem;
   padding: 1.5rem;
 }
 
-.experience-card-header {
+.education-card-header {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
-.experience-card-header-left {
+.education-card-header-left {
   justify-content: flex-end;
 }
 
-.experience-card-title {
+.education-card-title {
   font-family: "JetBrains Mono", monospace;
   font-weight: 800;
   font-size: 1.875rem;
 }
 
-.experience-card-company {
+.education-card-company {
   font-family: "JetBrains Mono", monospace;
   color: rgb(255 255 255 / 0.6);
   font-size: 1rem;
   margin-top: 0.25rem;
 }
 
-.experience-card-logo-container {
+.education-card-logo-container {
   flex-shrink: 0;
 }
 
-.experience-card-logo {
+.education-card-logo {
   width: 5.5rem;
   height: 5.5rem;
   border-radius: 0.5rem;
@@ -87,17 +97,23 @@
   padding: 0.25rem;
 }
 
-.experience-card-date {
+.education-card-date {
   font-family: "JetBrains Mono", monospace;
   color: rgb(255 255 255 / 0.4);
   font-size: 0.875rem;
   margin-top: 0.5rem;
+  text-align: left;
 }
 
-.experience-card-description {
+.education-card-list {
   font-family: "JetBrains Mono", monospace;
   color: rgb(255 255 255 / 0.8);
   font-size: 1rem;
   margin-top: 0.75rem;
   line-height: 1.625;
+  text-align: left;
+
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-left: 1.25rem;
 }

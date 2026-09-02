@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  justify-content: flex-end;
+
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  border-top: 1px solid rgb(255 255 255 / 0.1);
+}
+
+@media (max-width: 850px) {
+  .footer {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.footer-text {
+  line-height: 1;
+
+  font-family: "Anton", sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: var(--neon-yellow);
+}

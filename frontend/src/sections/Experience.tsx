@@ -8,13 +8,13 @@ import "./Experience.css"
 
 import { Card, CardItem } from "../components/Card";
 
-import sickKids from "./assets/sickkids.webp";
-import watai from "./assets/watai.png";
-import utc from "./assets/utc.png";
+import sickKids from "../assets/sickkids.webp";
+import watai from "../assets/watai.png";
+import utc from "../assets/utc.png";
 
-import sickKidsHospital from "./assets/sickkidshospital.webp";
-import wataiImage from "./assets/wataiimage.avif";
-import utcImage from "./assets/utcimage.webp";
+import sickKidsHospital from "../assets/sickkidshospital.webp";
+import wataiImage from "../assets/wataiimage.avif";
+import utcImage from "../assets/utcimage.webp";
 
 
 export default function Experience() {
@@ -28,87 +28,99 @@ export default function Experience() {
 
         <div className="timeline-items"> {/* Timeline items */}
 
-          {/* Item 1 - Left */}
+          {/* Item 1: Card Left, Image Right */}
           <div className="timeline-item">
             <div className="timeline-card timeline-card-left">
-              <Card className="w-full" containerClassName="py-0 w-full">
-                  <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
-                    <div className="flex items-center gap-3 justify-end">
-                      <div>
-                        <h3 className="text-3xl" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>Machine Learning Research Assistant</h3>
-                        <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'JetBrains Mono', monospace" }}>The Hospital for Sick Children</p>
-                      </div>
-                      <CardItem translateZ={80} className="flex-shrink-0">
-                        <img src={sickKids} alt="sick-kids" className="w-22 h-22 rounded-lg object-contain bg-white/10 p-1" loading="lazy" />
-                      </CardItem>
+              <Card 
+                className="experience-card" 
+                containerClassName="experience-card-container"
+              >
+                <CardItem className="experience-card-content">
+                  <div className="experience-card-header experience-card-header-left">
+                    <div>
+                      <h3 className="experience-card-title">Machine Learning Research Assistant</h3>
+                      <p className="experience-card-company">The Hospital for Sick Children</p>
                     </div>
-                    <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'JetBrains Mono', monospace" }}>May 2026 - Aug 2026</p>
-                    <p className="text-white/80 text-base mt-3 leading-relaxed" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
-                      Reaction Generative-Flow Networks & Parallel Synthesis
-                    </p>
-                  </CardItem>
+
+                    <CardItem className="experience-card-logo-container">
+                      <img src={sickKids} alt="sick-kids" className="experience-card-logo" loading="lazy" />
+                    </CardItem>
+                  </div>
+
+                  <p className="experience-card-date">May 2026 - Aug 2026</p>
+                  <p className="experience-card-description">Reaction Generative-Flow Networks & Parallel Synthesis</p>
+                </CardItem>
               </Card>
             </div>
-            {/* Dot */}
-            <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
-            <div className="timeline-img w-1/2 pl-12">
-              <img src={sickKidsHospital} alt="SickKids Hospital" className="w-full rounded-2xl object-cover h-48" loading="lazy" />
+
+            <div className="timeline-dot" />
+
+            <div className="timeline-image timeline-image-right">
+              <img src={sickKidsHospital} alt="SickKids Hospital" className="timeline-image-content" loading="lazy" />
             </div>
           </div>
 
-          {/* Item 2 - Right */}
-          <div className="timeline-item relative flex items-center">
-            <div className="timeline-img w-1/2 pr-12">
-              <img src={wataiImage} alt="WAT.ai" className="w-full rounded-2xl object-cover h-48" loading="lazy" />
+          {/* Item 2: Card Right, Image Left */}
+          <div className="timeline-item">
+            <div className="timeline-image timeline-image-left">
+              <img src={wataiImage} alt="WAT.ai" className="timeline-image-content" loading="lazy" />
             </div>
-            {/* Dot */}
-            <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
-            <div className="timeline-card timeline-card-right w-1/2 pl-12">
-              <Card className="w-full" containerClassName="py-0 w-full">
-                  <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
-                    <div className="flex items-center gap-3">
-                      <CardItem translateZ={80} className="flex-shrink-0">
-                        <img src={watai} alt="logo" className="w-22 h-22 rounded-lg object-contain bg-white/10 p-1" loading="lazy" />
-                      </CardItem>
-                      <div>
-                        <h3 className="text-3xl" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>Machine Learning Scientist</h3>
-                        <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'JetBrains Mono', monospace" }}>WAT.ai</p>
-                      </div>
+
+            <div className="timeline-dot" />
+
+            <div className="timeline-card timeline-card-right">
+              <Card
+                className="experience-card"
+                containerClassName="experience-card-container"
+              >
+                <CardItem className="experience-card-content">
+                  <div className="experience-card-header">
+                    <CardItem className="experience-card-logo-container">
+                      <img src={watai} alt="logo" className="experience-card-logo" loading="lazy" />
+                    </CardItem>
+
+                    <div>
+                      <h3 className="experience-card-title">Machine Learning Scientist</h3>
+                      <p className="experience-card-company">WAT.ai</p>
                     </div>
-                    <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Sept 2025 - Feb 2026</p>
-                    <p className="text-white/80 text-base mt-3 leading-relaxed" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
-                      Semantic Segmentation of Microaneuryms in Fundus Imaging
-                    </p>
-                  </CardItem>
+                  </div>
+
+                  <p className="experience-card-date">Sept 2025 - Feb 2026</p>
+                  <p className="experience-card-description">Semantic Segmentation of Microaneuryms in Fundus Imaging</p>
+                </CardItem>
               </Card>
             </div>
           </div>
 
-          {/* Item 3 - Left */}
-          <div className="timeline-item relative flex items-center">
-            <div className="timeline-card w-1/2 pr-12 text-right">
-              <Card className="w-full" containerClassName="py-0 w-full">
-                  <CardItem translateZ={50} className="w-full bg-[rgb(33,33,33)] border-2 border-white/10 rounded-2xl card-corner-glow p-6">
-                    <div className="flex items-center gap-3 justify-end">
-                      <div>
-                        <h3 className="text-3xl" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>Tennis Instructor</h3>
-                        <p className="text-white/60 text-base mt-1" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Unionville Tennis Club</p>
-                      </div>
-                      <CardItem translateZ={80} className="flex-shrink-0">
-                        <img src={utc} alt="logo" className="w-22 h-22 rounded-lg object-contain bg-white/10 p-1" loading="lazy" />
-                      </CardItem>
+          {/* Item 3: Card Left, Image Right */}
+          <div className="timeline-item">
+            <div className="timeline-card timeline-card-left">
+              <Card
+                className="experience-card"
+                containerClassName="experience-card-container"
+              >
+                <CardItem className="experience-card-content">
+                  <div className="experience-card-header experience-card-header-left">
+                    <div>
+                      <h3 className="experience-card-title">Tennis Instructor</h3>
+                      <p className="experience-card-company">Unionville Tennis Club</p>
                     </div>
-                    <p className="text-white/40 text-sm mt-2" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Apr 2022 - Aug 2025</p>
-                    <p className="text-white/80 text-base mt-3 leading-relaxed" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
-                      TPA Certified Instructor | 500+ Hours On-Court
-                    </p>
-                  </CardItem>
+
+                    <CardItem className="experience-card-logo-container">
+                      <img src={utc} alt="logo" className="experience-card-logo" loading="lazy" />
+                    </CardItem>
+                  </div>
+
+                  <p className="experience-card-date">Apr 2022 - Aug 2025</p>
+                  <p className="experience-card-description">TPA Certified Instructor | 500+ Hours On-Court</p>
+                </CardItem>
               </Card>
             </div>
-            {/* Dot */}
-            <div className="timeline-dot absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#daff0f] z-10" />
-            <div className="timeline-img w-1/2 pl-12">
-              <img src={utcImage} alt="Unionville Tennis Club" className="w-full rounded-2xl object-cover h-48" loading="lazy" />
+
+            <div className="timeline-dot" />
+
+            <div className="timeline-image timeline-image-right">
+              <img src={utcImage} alt="Unionville Tennis Club" className="timeline-image-content" loading="lazy" />
             </div>
           </div>
 

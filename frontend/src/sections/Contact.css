@@ -1,4 +1,4 @@
-.about-me {
+.contact {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -14,30 +14,16 @@
 }
 
 @media (max-width: 850px) {
-  .about-me {
+  .contact {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
 }
 
-.about-card-outer {
-  width: 100%;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.about-card-inner {
+.contact-title {
   position: relative;
   z-index: 10;
-  width: 100%;
-  padding: 2rem;
-}
 
-.card-item.about-title-container {
-  width: 100%;
-}
-
-.about-title {
   color: white;
   line-height: 1;
   margin-bottom: 2rem;
@@ -48,33 +34,16 @@
   letter-spacing: 0.03em;
 }
 
-.about-content {
-  display: flex;
-  gap: 3rem;
-  align-items: flex-start;
-  width: 100%;
-}
+.contact-info {
+  position: relative;
+  z-index: 10;
 
-.about-text {
-  color: rgb(255 255 255 / 0.9);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  color: rgb(255 255 255 / 0.8);
   font-size: 1rem;
   line-height: 1.625;
-  flex: 1; /* Allowed to grow and take over leftover space */
   font-family: "JetBrains Mono", monospace;
-}
-
-.about-image-container {
-  flex-shrink: 0;
-}
-
-.about-image {
-  width: 24rem;
-  border-radius: 2rem;
-  object-fit: cover;
-}
-
-@media (max-width: 1090px) {
-  .about-image {
-    display: none;
-  }
 }

@@ -1,18 +1,22 @@
 import type React from "react"
 import { useCallback, useEffect, useRef, useState } from "react"
-import { cn } from "../lib/utils"
+
+import "./MacOSDock.css"
 
 export interface DockItem {
   id: string
   icon: string
 }
 
-interface MacOSDockProps {
+interface MacOSDockProperties {
   items: DockItem[]
   className?: string
 }
 
-const MacOSDock: React.FC<MacOSDockProps> = ({ items, className = "" }) => {
+export default function MacOSDock ({
+  items,
+  className=""
+}: MacOSDockProperties) {
   const [mouseX, setMouseX] = useState<number | null>(null)
   const [currentScales, setCurrentScales] = useState<number[]>(items.map(() => 1))
   const [currentPositions, setCurrentPositions] = useState<number[]>([])
@@ -146,7 +150,7 @@ const MacOSDock: React.FC<MacOSDockProps> = ({ items, className = "" }) => {
 
   return (
     <div
-      className={cn("backdrop-blur-md", className)}
+      className={`macos-dock ${className ?? ""}`}
       onMouseLeave={handleMouseLeave}
       onMouseMove={handleMouseMove}
       ref={dockRef}
@@ -165,7 +169,7 @@ const MacOSDock: React.FC<MacOSDockProps> = ({ items, className = "" }) => {
       }}
     >
       <div
-        className="relative"
+        className="macos-dock-items"
         style={{ height: `${baseIconSize}px`, width: "100%" }}
       >
         {items.map((item, index) => {
@@ -175,7 +179,7 @@ const MacOSDock: React.FC<MacOSDockProps> = ({ items, className = "" }) => {
 
           return (
             <div
-              className="absolute flex items-center justify-center"
+              className="macos-dock-item"
               key={item.id}
               style={{
                 left: `${position - scaledSize / 2}px`,
@@ -187,7 +191,7 @@ const MacOSDock: React.FC<MacOSDockProps> = ({ items, className = "" }) => {
               }}
             >
               <div
-                className="bg-white rounded-xl flex items-center justify-center"
+                className="macos-dock-icon"
                 style={{
                   width: `${scaledSize}px`,
                   height: `${scaledSize}px`,
@@ -196,7 +200,7 @@ const MacOSDock: React.FC<MacOSDockProps> = ({ items, className = "" }) => {
               >
                 <img
                   alt={item.id}
-                  className="object-contain w-full h-full"
+                  className="macos-dock-image"
                   src={item.icon}
                   style={{
                     filter: `drop-shadow(0 ${scale > 1.2 ? 2 : 1}px ${scale > 1.2 ? 4 : 2}px rgba(0,0,0,${0.2 + (scale - 1) * 0.15}))`,
@@ -211,4 +215,3 @@ const MacOSDock: React.FC<MacOSDockProps> = ({ items, className = "" }) => {
   )
 }
 
-export default MacOSDock
