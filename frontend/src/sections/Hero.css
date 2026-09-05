@@ -4,10 +4,7 @@
   align-items: center; /* Center childrem horizontally*/
   justify-content: flex-start; /* Put children at the top */
 
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-top: 6rem;
-  padding-bottom: 4rem;
+  padding: 6rem clamp(1rem, 5vw, 4rem) 4rem;
 
   position: relative;
   overflow: hidden;
@@ -25,7 +22,7 @@
 
   font-family: "Anton", sans-serif;
   font-weight: 700;
-  font-size: clamp(3rem, 16vw, 12rem);
+  font-size: clamp(1.5rem, 14vw, 12rem);
   letter-spacing: 0.03em;
 }
 
@@ -80,6 +77,7 @@
 
 .hero-profile {
   height: 20rem;
+  width: 20rem;
   border-radius: 9999px;
 
   position: relative;

@@ -8,7 +8,7 @@ import "./Hero.css"
 
 import { WormholeBackground } from "../components/WormholeBackground";
 
-import profileImg from "../assets/casual_profile.jpg";
+import profileImg from "../assets/profile-nf.jpg";
 import wingLeft from "../assets/wing_left.webp";
 import wingRight from "../assets/wing_right.webp";
 
