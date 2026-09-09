@@ -23,7 +23,7 @@ export default function AboutMe() {
         <div className="about-content">
           <div className="about-text">
             <p>
-              Hi, I’m Michael! I'm currently a 2A BCS Computer Science + Digital Hardware student at the University of Waterloo.
+              Hi, I’m Michael! I'm currently a 2A BCS Computer Science student at the University of Waterloo.
               My primary interests are in Embedded Systems, Machine Learning, and Computer Vision.
               Outside of academics, I have over four years of experience coaching tennis at Unionville Tennis
               Club and I compete as a Varsity Cross-Country athlete for the University of Waterloo.
