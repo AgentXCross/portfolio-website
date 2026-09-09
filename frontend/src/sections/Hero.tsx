@@ -20,7 +20,7 @@ export default function Hero() {
 
       <h1 className="hero-title">MICHAEL L.</h1>
 
-      <p className="hero-subtitle">Computer Science @ UWaterloo</p>
+      <p className="hero-subtitle">CS/Digital Hardware @ UWaterloo</p>
 
       <div className="hero-graphics">
         <img

@@ -42,8 +42,8 @@ export default function Extracurriculars() {
                   </CardItem>
                 </div>
 
-                <p className="extracurricular-card-date">Sept 2025 - Current</p>
-                <p className="extracurricular-card-description">Varsity XC</p>
+                <p className="extracurricular-card-date">Sept 2025 - Sept 2026</p>
+                <p className="extracurricular-card-description">Varsity Cross-Country</p>
               </Card>
             </div>
 
