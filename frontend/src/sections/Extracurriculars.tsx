@@ -14,6 +14,7 @@ import torontoTrack from "../assets/uoft.png";
 import uttcTeam from "../assets/uoftteam.webp";
 import tennisCanada from "../assets/tenniscanada.svg";
 import avivaCentre from "../assets/avivacentre.webp";
+import rowingBanner from "../assets/rowing_banner.jpg";
 
 
 export default function Extracurriculars() {
@@ -27,6 +28,34 @@ export default function Extracurriculars() {
         <div className="timeline-line" />
 
         <div className="timeline-items">
+          {/* Item 0: Card Right, Image Left */}
+          <div className="timeline-item">
+            <div className="timeline-image timeline-image-left">
+              <img src={rowingBanner} alt="Placeholder" className="timeline-image-content" loading="lazy" />
+            </div>
+
+            <div className="timeline-dot" />
+
+            <div className="timeline-card timeline-card-right">
+              <Card className="extracurricular-card" containerClassName="extracurricular-card-container">
+                <div className="extracurricular-card-header">
+                  <CardItem className="extracurricular-card-logo-container">
+                    <img src={warriorHelm} alt="logo" className="extracurricular-card-logo" loading="lazy" />
+                  </CardItem>
+
+                  <div>
+                    <h3 className="extracurricular-card-title">Varsity Rowing Athlete</h3>
+                    <p className="extracurricular-card-org">University of Waterloo</p>
+                  </div>
+                </div>
+
+                <p className="extracurricular-card-date">Sept 2026 - Present</p>
+                <p className="extracurricular-card-description">Varsity Rowing</p>
+              </Card>
+            </div>
+          </div>
+
+
           {/* Item 1: Card Left, Image Right */}
           <div className="timeline-item">
             <div className="timeline-card timeline-card-left">

@@ -26,7 +26,8 @@ export default function AboutMe() {
               Hi, I’m Michael! I'm currently a 2A BCS Computer Science student at the University of Waterloo.
               My primary interests are in Embedded Systems, Machine Learning, and Computer Vision.
               Outside of academics, I have over four years of experience coaching tennis at Unionville Tennis
-              Club and I compete as a Varsity Cross-Country athlete for the University of Waterloo.
+              Club, I compete as a Varsity Rowing athlete for the University of Waterloo, and previously competed as 
+              a Varsity Cross-Country athlete.
             </p>
           </div>
           <CardItem className="about-image-container">

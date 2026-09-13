@@ -45,7 +45,7 @@ export default function Education() {
                   <li>Major Average: 93.1% | Cumulative Average: 92.7% | GPA: 3.98/4.00</li>
                   <li>Hershel and Mary Anne Harris Scholarship, President's Scholarship of Distinction</li>
                   <li>Coursework: Linear Algebra, Functional Programming, Imperative Programming & Data Structures, Calculus, Probability & Statistics</li>
-                  <li>Varsity XC, WAT.ai Design Team</li>
+                  <li>Varsity Rowing, Varsity Cross-Country, WAT.ai Design Team</li>
                 </ul>
               </Card>
             </div>
