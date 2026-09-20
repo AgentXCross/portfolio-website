@@ -32,7 +32,7 @@ export default function Education() {
                 <div className="education-card-header education-card-header-left">
                   <div>
                     <h3 className="education-card-title">University of Waterloo</h3>
-                    <p className="education-card-company">Bachelor of Computer Science - BCS, Computer Science with Digital Hardware Specialization</p>
+                    <p className="education-card-company">Bachelor of Computer Science - BCS, Computer Science</p>
                   </div>
 
                   <CardItem className="education-card-logo-container">
@@ -44,7 +44,7 @@ export default function Education() {
                 <ul className="education-card-list">
                   <li>Major Average: 93.1% | Cumulative Average: 92.7% | GPA: 3.98/4.00</li>
                   <li>Hershel and Mary Anne Harris Scholarship, President's Scholarship of Distinction</li>
-                  <li>Coursework: Linear Algebra, Functional Programming, Imperative Programming & Data Structures, Calculus, Probability & Statistics</li>
+                  <li>Coursework: Object-Oriented Programming, Linear Algebra, Calculus, Functional Programming, Imperative Programming & Data Structures, Probability & Statistics, Compilers and Low-Level Programming</li>
                   <li>Varsity Cross-Country, WAT.ai Design Team</li>
                 </ul>
               </Card>
