@@ -40,7 +40,7 @@ export default function Education() {
                   </CardItem>
                 </div>
 
-                <p className="education-card-date">Sept 2025 - Current</p>
+                <p className="education-card-date">Sept 2025 - Apr 2030</p>
                 <ul className="education-card-list">
                   <li>Major Average: 93.1% | Cumulative Average: 92.7% | GPA: 3.98/4.00</li>
                   <li>Hershel and Mary Anne Harris Scholarship, President's Scholarship of Distinction</li>

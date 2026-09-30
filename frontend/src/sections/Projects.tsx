@@ -30,7 +30,11 @@ export default function Projects() {
             <h3 className="project-title">C++ Machine Learning Library from Scratch</h3>
             <p className="project-date">June 2026 - Present</p>
             <p className="project-description">
-              A small machine learning library built from scratch in C++. Implementing classical ML algorithms alongside deep learning components. Built in a PyTorch-style where training loops are explicit and the math behind forward passes, gradient calculations, and parameter updates stays visible.
+              A C++17 machine learning library built from scratch using the C++ Standard Library. cpp_ml implements classical machine learning algorithms, neural network components, preprocessing utilities, and core tensor operations.
+              <br/><br/>
+              The library follows a PyTorch-inspired design, where training loops are written explicitly, and the math behind forward passes, gradients, and parameter updates stays visible.
+              <br/><br/>
+              cpp_ml is designed as an educational library for learning machine learning and deep learning fundamentals without hiding their implementations behind high-level abstractions, commonly seen in libraries like scikit-learn. The goal is to provide a simple interface for users while keeping the algorithm implementations readable.
             </p>
             <div className="project-links">
               <a href="https://github.com/AgentXCross/ml-from-scratch-cpp" target="_blank" rel="noopener noreferrer" className="project-link">

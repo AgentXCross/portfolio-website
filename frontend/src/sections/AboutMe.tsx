@@ -24,7 +24,10 @@ export default function AboutMe() {
           <div className="about-text">
             <p>
               Hi, I’m Michael! I'm currently a 2A BCS Computer Science student at the University of Waterloo.
-              My primary interests are in Machine Learning and Computer Vision.
+              My primary interests are in Machine Learning, Computer Vision, and Computer Systems. 
+              <br /><br />
+              I'm currently working on two personal projects for fun: a C++17 machine learning library built 
+              from scratch using the C++ Standard Library and CourtHawk, a tennis computer vision system.
               Outside of academics, I have over four years of experience coaching tennis at Unionville Tennis
               Club and I previously competed as a Varsity Cross-Country athlete for the University of Waterloo.
             </p>
