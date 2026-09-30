@@ -111,8 +111,8 @@ a, button {
 }
 
 ::selection {
-  background-color: #0003ab;
-  color: black;
+  background-color: #cf008d;
+  color: rgb(0, 0, 0);
 }
 
 @keyframes blink {
