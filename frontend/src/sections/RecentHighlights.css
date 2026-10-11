@@ -1,0 +1,214 @@
+.recent-highlights {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@media (max-width: 850px) {
+  .recent-highlights {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.recent-highlights-title {
+  color: white;
+  line-height: 1;
+  margin-bottom: 4rem;
+
+  font-family: "Anton", sans-serif;
+  font-weight: 800;
+  font-size: 4rem;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 930px) {
+  .recent-highlights-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .recent-highlights-title {
+    margin-bottom: 3.2rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .recent-highlights-title {
+    font-size: 2.7rem;
+  }
+}
+
+.highlights-carousel {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.carousel-arrow {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+
+  background-color: rgb(33, 33, 33);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  color: var(--neon-yellow);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: opacity 150ms, transform 150ms;
+}
+
+.carousel-arrow:hover {
+  opacity: 0.7;
+}
+
+.carousel-arrow:active {
+  transform: scale(0.92);
+}
+
+.carousel-viewport {
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 400ms ease;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+}
+
+.highlight-card-container {
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.highlight-card {
+  width: 100%;
+  padding: 2rem;
+}
+
+/* .card.highlight-card (two classes) outweighs .card:hover's own specificity,
+   overriding the site-wide hover scale just for these cards. */
+.card.highlight-card:hover {
+  transform: none;
+}
+
+.highlight-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .highlight-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}
+
+.highlight-image-container {
+  flex-shrink: 0;
+}
+
+.highlight-image {
+  width: 11rem;
+  height: auto;
+  border-radius: 1.5rem;
+}
+
+.highlight-text {
+  flex: 1;
+}
+
+.highlight-title {
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+
+  font-family: "Anton", sans-serif;
+  font-weight: 800;
+  font-size: 3.0rem;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 930px) {
+  .highlight-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .highlight-title {
+    font-size: 2.0rem;
+  }
+}
+
+.highlight-date {
+  color: rgb(255 255 255 / 0.4);
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.highlight-description {
+  color: rgb(255 255 255 / 0.8);
+  font-size: 1rem;
+  line-height: 1.625;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.carousel-dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 150ms;
+}
+
+.carousel-dot:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-dot.active {
+  background-color: var(--neon-yellow);
+}

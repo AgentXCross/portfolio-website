@@ -13,6 +13,7 @@ import { useEffect } from "react";
 import NavBar from "./sections/NavBar";
 import Hero from "./sections/Hero";
 import AboutMe from "./sections/AboutMe"
+import RecentHighlights from "./sections/RecentHighlights"
 import Experience from "./sections/Experience"
 import Stack from "./sections/Stack"
 import Projects from "./sections/Projects"
@@ -69,6 +70,7 @@ export default function App() {
     <div style={{ backgroundColor: '#000000' }}>
       <NavBar />
       <Hero />
+      <RecentHighlights />
       <AboutMe />
       <Experience />
       <Stack />
