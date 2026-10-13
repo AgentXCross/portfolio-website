@@ -18,14 +18,14 @@ interface Highlight {
 const highlights: Highlight[] = [
   {
     id: "first-50km-run",
-    title: "FIRST 50KM RUN",
+    title: "First Ultramarathon",
     date: "September 26, 2026",
     description: "Hit 50km in a single run for the first time around the KW area. New personal distance record!!!",
     image: strava50km,
   },
   {
     id: "19th-birthday",
-    title: "19TH BIRTHDAY",
+    title: "19th Birthday",
     date: "October 2, 2026",
     description: "Celebrated my 19th birthday with a 19km run in the shape of a 19!",
     image: strava19th,

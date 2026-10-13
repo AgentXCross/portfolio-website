@@ -12,8 +12,9 @@ import { useEffect } from "react";
 
 import NavBar from "./sections/NavBar";
 import Hero from "./sections/Hero";
-import AboutMe from "./sections/AboutMe"
 import RecentHighlights from "./sections/RecentHighlights"
+import GarminStrava from "./sections/Garmin-Strava";
+import AboutMe from "./sections/AboutMe"
 import Experience from "./sections/Experience"
 import Stack from "./sections/Stack"
 import Projects from "./sections/Projects"
@@ -70,6 +71,7 @@ export default function App() {
     <div style={{ backgroundColor: '#000000' }}>
       <NavBar />
       <Hero />
+      <GarminStrava/>
       <RecentHighlights />
       <AboutMe />
       <Experience />
@@ -79,7 +81,6 @@ export default function App() {
       <Extracurriculars />
       <Contact />
       <Footer />
-
       <Analytics />
     </div>
   );

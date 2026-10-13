@@ -1,0 +1,147 @@
+.garmin-strava {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+  padding-top: 2rem;
+  padding-bottom: 1.6rem;
+
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.1125) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1125) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@media (max-width: 850px) {
+  .garmin-strava {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.garmin-strava-title {
+  color: white;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 930px) {
+  .garmin-strava-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .garmin-strava-title {
+    font-size: 2.7rem;
+  }
+}
+
+.garmin-strava-subtitle {
+  color: rgb(255 255 255 / 0.5);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 575px) {
+  .garmin-strava-subtitle {
+    margin-bottom: 1.2rem;
+  }
+}
+
+.garmin-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .garmin-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .garmin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.garmin-card-container {
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* .card-outer's own align-items: center only centers a shorter card
+   within the grid row's height. Stretching makes all 6 card boxes
+   match the row height instead of floating at their own content size. */
+.card-outer.garmin-card-container {
+  align-items: stretch;
+}
+
+.garmin-card {
+  width: 100%;
+  padding: 1.75rem;
+}
+
+.garmin-card:hover {
+  box-shadow: 0 0 30px 10px rgb(255, 128, 0);
+}
+
+/* Same specificity trick as .card.highlight-card:hover - two classes
+   beat .card's own align-items: center without relying on source order. */
+.card.garmin-card {
+  align-items: flex-start;
+}
+
+/* Two classes also outweigh .card::before/::after, so these cards
+   opt out of the site-wide corner glow entirely. */
+.card.garmin-card::before,
+.card.garmin-card::after {
+  content: none;
+}
+
+.garmin-card-icon {
+  color: #ff8000;
+  margin-bottom: 1rem;
+}
+
+.garmin-card-title {
+  color: rgb(255 255 255 / 0.6);
+  font-size: 1rem;
+  font-family: "JetBrains Mono", monospace;
+  margin-bottom: 0.5rem;
+}
+
+.garmin-card-value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.garmin-card-value {
+  color: white;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-size: 2.3rem;
+  line-height: 1;
+}
+
+.garmin-card-units {
+  color: rgb(255 255 255 / 0.85);
+  font-size: 1rem;
+  font-family: "JetBrains Mono", monospace;
+}
+

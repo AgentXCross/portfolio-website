@@ -1,12 +1,10 @@
 /*
 AboutMe.tsx
 
-Section 2: About Me 
+Section 2: About Me
 */
 
 import "./AboutMe.css"
-
-import { Card, CardItem } from "../components/Card";
 
 import bibsImg from "../assets/bibs.webp";
 
@@ -14,30 +12,25 @@ import bibsImg from "../assets/bibs.webp";
 export default function AboutMe() {
   return (
     <section id="about" className="fade-in-section about-me">
-      <Card className="about-card-inner" containerClassName="about-card-outer">
+      <h2 className="about-title">ABOUT ME</h2>
 
-        <CardItem className="about-title-container">
-          <h2 className="about-title">ABOUT ME</h2>
-        </CardItem>
-        
-        <div className="about-content">
-          <div className="about-text">
-            <p>
-              Hi, I’m Michael! I'm currently a 2A BCS Computer Science student at the University of Waterloo.
-              My primary interests are in Machine Learning, Computer Vision, and Computer Systems. 
-              <br /><br />
-              I'm currently working on two personal projects for fun: a C++17 machine learning library built 
-              from scratch using the C++ Standard Library and CourtHawk, a tennis computer vision system.
-              Outside of academics, I have over four years of experience coaching tennis at Unionville Tennis
-              Club and I previously competed as a Varsity Cross-Country athlete for the University of Waterloo.
-            </p>
-          </div>
-          <CardItem className="about-image-container">
-            <img src={bibsImg} alt="" className="about-image" loading="lazy" />
-          </CardItem>
+      <div className="about-content">
+        <div className="about-text">
+          <p>
+            Hi, I’m Michael! I'm currently a 2A BCS Computer Science student at the University of Waterloo.
+            My primary interests are in Machine Learning, Computer Vision, and Systems Programming.
+            <br /><br />
+            I'm currently working on two personal projects for fun: a C++17 machine learning library built
+            from scratch using the C++ Standard Library and CourtHawk, a full-stack Tennis computer vision system.
+            <br /><br />
+            Outside of academics, I have over four years of experience coaching tennis at Unionville Tennis
+            Club and I previously competed as a Varsity Cross-Country athlete for the University of Waterloo.
+          </p>
         </div>
-
-      </Card>
+        <div className="about-image-container">
+          <img src={bibsImg} alt="" className="about-image" loading="lazy" />
+        </div>
+      </div>
     </section>
   );
 }

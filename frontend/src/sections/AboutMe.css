@@ -20,30 +20,13 @@
   }
 }
 
-.about-card-outer {
-  width: 100%;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.about-card-inner {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  padding: 2rem;
-}
-
-.card-item.about-title-container {
-  width: 100%;
-}
-
 .about-title {
   color: white;
   line-height: 1;
   margin-bottom: 2rem;
 
   font-family: "Anton", sans-serif;
-  font-weight: 800;
+  font-weight: 400;
   font-size: 4rem;
   letter-spacing: 0.03em;
 }
