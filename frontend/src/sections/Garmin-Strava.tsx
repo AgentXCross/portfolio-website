@@ -31,7 +31,7 @@ const garminCards: GarminCardData[] = [
   { icon: Route, title: "Total Running Distance", value: garminStats.totalRunningDistancekm, units: "km"},
   { icon: Flame, title: "Strava Streak", value: garminStats.stravaStreakweeks, units: "Weeks" },
   { icon: Mountain, title: "Total Running Ascent", value: garminStats.totalAscentm, units: "m" },
-  { icon: Dumbbell, title: "Total Gym Time", value: garminStats.totalGymTimeh, units: "h" },
+  { icon: Dumbbell, title: "Total Gym Time (Since Sept 2026)", value: garminStats.totalGymTimeh, units: "h" },
   { icon: Timer, title: "Total Running Time", value: garminStats.totalRunningTimeh, units: "h" },
 ];
 
