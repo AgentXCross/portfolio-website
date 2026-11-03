@@ -31,7 +31,7 @@ const garminCards: GarminCardData[] = [
   { icon: Route, title: "Total Running Distance", value: garminStats.totalRunningDistancekm, units: "km"},
   { icon: Flame, title: "Strava Streak", value: garminStats.stravaStreakweeks, units: "Weeks" },
   { icon: Mountain, title: "Total Running Ascent", value: garminStats.totalAscentm, units: "m" },
-  { icon: Dumbbell, title: "Total Gym Time (Since Sept 2026)", value: garminStats.totalGymTimeh, units: "h" },
+  { icon: Dumbbell, title: "Total Gym Time (Since June 2026)", value: garminStats.totalGymTimeh, units: "h" },
   { icon: Timer, title: "Total Running Time", value: garminStats.totalRunningTimeh, units: "h" },
 ];
 
@@ -40,7 +40,7 @@ export default function GarminStrava() {
   return (
     <section id="garmin-strava" className="fade-in-section garmin-strava">
       <h2 className="garmin-strava-title">LIFETIME RUNNING/GYM STATS</h2>
-      <h3 className="garmin-strava-subtitle">Since Oct 2021, Last Updated Oct 2026</h3>
+      <h3 className="garmin-strava-subtitle">Since Oct 2021, Last Updated Nov 2026</h3>
 
       <div className="garmin-grid">
         {garminCards.map((card) => {
