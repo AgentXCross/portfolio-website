@@ -16,6 +16,92 @@ import tennisCanada from "../assets/tenniscanada.svg";
 import avivaCentre from "../assets/avivacentre.webp";
 
 
+interface ExtracurricularEntry {
+  title: string;
+  org: string;
+  date: string;
+  description: string;
+  logo: string;
+  image: string;
+  imageAlt: string;
+}
+
+// Add new entries here. Order is top-to-bottom; sides alternate automatically
+// (first entry: card left / image right, second: card right / image left, ...).
+const extracurriculars: ExtracurricularEntry[] = [
+  {
+    title: "Varsity XC Athlete",
+    org: "University of Waterloo",
+    date: "Sept 2025 - Sept 2026",
+    description: "Varsity Cross-Country",
+    logo: warriorHelm,
+    image: xcteam,
+    imageAlt: "University of Waterloo cross-country team",
+  },
+  {
+    title: "XC & Track Athlete",
+    org: "University of Toronto Track Club",
+    date: "July 2022 - August 2025",
+    description: "1:22:16 Toronto Half Marathon",
+    logo: torontoTrack,
+    image: uttcTeam,
+    imageAlt: "University of Toronto Track Club team",
+  },
+  {
+    title: "Tennis Athlete",
+    org: "Tennis Canada",
+    date: "Mar 2018 - June 2022",
+    description: "Career Peak Rankings: 48th in Canadian Singles, 25th in Canadian Doubles",
+    logo: tennisCanada,
+    image: avivaCentre,
+    imageAlt: "Aviva Centre",
+  },
+];
+
+
+function TimelineItem({ entry, cardOnLeft }: { entry: ExtracurricularEntry; cardOnLeft: boolean }) {
+  const logo = (
+    <CardItem className="extracurricular-card-logo-container">
+      <img src={entry.logo} alt={`${entry.org} logo`} className="extracurricular-card-logo" loading="lazy" />
+    </CardItem>
+  );
+
+  const heading = (
+    <div>
+      <h3 className="extracurricular-card-title">{entry.title}</h3>
+      <p className="extracurricular-card-org">{entry.org}</p>
+    </div>
+  );
+
+  const card = (
+    <div className={`timeline-card ${cardOnLeft ? "timeline-card-left" : "timeline-card-right"}`}>
+      <Card className="extracurricular-card" containerClassName="extracurricular-card-container">
+        <div className={`extracurricular-card-header${cardOnLeft ? " extracurricular-card-header-left" : ""}`}>
+          {cardOnLeft ? <>{heading}{logo}</> : <>{logo}{heading}</>}
+        </div>
+
+        <p className="extracurricular-card-date">{entry.date}</p>
+        <p className="extracurricular-card-description">{entry.description}</p>
+      </Card>
+    </div>
+  );
+
+  const image = (
+    <div className={`timeline-image ${cardOnLeft ? "timeline-image-right" : "timeline-image-left"}`}>
+      <img src={entry.image} alt={entry.imageAlt} className="timeline-image-content" loading="lazy" />
+    </div>
+  );
+
+  return (
+    <div className="timeline-item">
+      {cardOnLeft ? card : image}
+      <div className="timeline-dot" />
+      {cardOnLeft ? image : card}
+    </div>
+  );
+}
+
+
 export default function Extracurriculars() {
   return (
     <section id="extracurriculars" className="fade-in-section extracurriculars">
@@ -27,87 +113,9 @@ export default function Extracurriculars() {
         <div className="timeline-line" />
 
         <div className="timeline-items">
-
-          {/* Item 1: Card Left, Image Right */}
-          <div className="timeline-item">
-            <div className="timeline-card timeline-card-left">
-              <Card className="extracurricular-card" containerClassName="extracurricular-card-container">
-                <div className="extracurricular-card-header extracurricular-card-header-left">
-                  <div>
-                    <h3 className="extracurricular-card-title">Varsity XC Athlete</h3>
-                    <p className="extracurricular-card-org">University of Waterloo</p>
-                  </div>
-
-                  <CardItem className="extracurricular-card-logo-container">
-                    <img src={warriorHelm} alt="logo" className="extracurricular-card-logo" loading="lazy" />
-                  </CardItem>
-                </div>
-
-                <p className="extracurricular-card-date">Sept 2025 - Sept 2026</p>
-                <p className="extracurricular-card-description">Varsity Cross-Country</p>
-              </Card>
-            </div>
-
-            <div className="timeline-dot" />
-
-            <div className="timeline-image timeline-image-right">
-              <img src={xcteam} alt="Placeholder" className="timeline-image-content" loading="lazy" />
-            </div>
-          </div>
-
-          {/* Item 2: Card Right, Image Left */}
-          <div className="timeline-item">
-            <div className="timeline-image timeline-image-left">
-              <img src={uttcTeam} alt="Placeholder" className="timeline-image-content" loading="lazy" />
-            </div>
-
-            <div className="timeline-dot" />
-
-            <div className="timeline-card timeline-card-right">
-              <Card className="extracurricular-card" containerClassName="extracurricular-card-container">
-                <div className="extracurricular-card-header">
-                  <CardItem className="extracurricular-card-logo-container">
-                    <img src={torontoTrack} alt="logo" className="extracurricular-card-logo" loading="lazy" />
-                  </CardItem>
-
-                  <div>
-                    <h3 className="extracurricular-card-title">XC & Track Athlete</h3>
-                    <p className="extracurricular-card-org">University of Toronto Track Club</p>
-                  </div>
-                </div>
-
-                <p className="extracurricular-card-date">July 2022 - August 2025</p>
-                <p className="extracurricular-card-description">1:22:16 Toronto Half Marathon</p>
-              </Card>
-            </div>
-          </div>
-
-          {/* Item 3: Card Left, Image Right */}
-          <div className="timeline-item">
-            <div className="timeline-card timeline-card-left">
-              <Card className="extracurricular-card" containerClassName="extracurricular-card-container">
-                <div className="extracurricular-card-header extracurricular-card-header-left">
-                  <div>
-                    <h3 className="extracurricular-card-title">Tennis Athlete</h3>
-                    <p className="extracurricular-card-org">Tennis Canada</p>
-                  </div>
-
-                  <CardItem className="extracurricular-card-logo-container">
-                    <img src={tennisCanada} alt="logo" className="extracurricular-card-logo" loading="lazy" />
-                  </CardItem>
-                </div>
-
-                <p className="extracurricular-card-date">Mar 2018 - June 2022</p>
-                <p className="extracurricular-card-description">Career Peek Rankings: 48th in Canadian Singles, 25th in Canadian Doubles</p>
-              </Card>
-            </div>
-
-            <div className="timeline-dot" />
-
-            <div className="timeline-image timeline-image-right">
-              <img src={avivaCentre} alt="Placeholder" className="timeline-image-content" loading="lazy" />
-            </div>
-          </div>
+          {extracurriculars.map((entry, i) => (
+            <TimelineItem key={entry.title + entry.org} entry={entry} cardOnLeft={i % 2 === 0} />
+          ))}
         </div>
       </div>
     </section>

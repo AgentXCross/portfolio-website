@@ -6,6 +6,7 @@ import { Card } from "../components/Card";
 
 import strava50km from "../assets/strava-50km.png";
 import strava19th from "../assets/strava-19th.png";
+import strava100weeks from "../assets/100weeks.jpg";
 
 interface Highlight {
   id: string;
@@ -16,6 +17,13 @@ interface Highlight {
 }
 
 const highlights: Highlight[] = [
+  {
+    id: "100-weeks",
+    title: "100 Week Strava Streak",
+    date: "November 6, 2026",
+    description: "100 consecutive weeks of activity on Strava and counting!",
+    image: strava100weeks,
+  },
   {
     id: "first-50km-run",
     title: "First Ultramarathon",
