@@ -35,7 +35,7 @@ const experiences: ExperienceEntry[] = [
   {
     title: "Computer Vision Engineering Intern",
     company: "Western University/Global Meteor Network",
-    date: "Jan 2026 - Apr 2026",
+    date: "Jan 2027 - Apr 2027",
     description: "Incoming W27",
     logo: western,
     image: westernImage,
